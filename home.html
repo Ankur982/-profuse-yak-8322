@@ -219,7 +219,7 @@
             margin-left: 90px;
         }
 
-        #trending_Offers {
+        #trending_Offers,#on_blog {
             width: 1400px;
             height: 1220px;
             display: grid;
@@ -234,30 +234,30 @@
             text-align: center;
         }
 
-        .trending_Offers_section {
+        .trending_Offers_section .on_blog_section {
             height: 610px;
         }
 
-        .trending_Offers_section>img {
+        .trending_Offers_section>img ,.on_blog_section>img{
             width: 100%;
             border-radius: 50%;
         }
 
-        .trending_Offers_txt {
+        .trending_Offers_txt ,.on_blog_txt {
             text-align: center;
         }
 
-        .trending_Offers_txt h3 {
+        .trending_Offers_txt h3 ,.on_blog_section_txt h3{
             font-size: 18px;
             color: #333333;
         }
 
-        .trending_Offers_txt p {
+        .trending_Offers_txt p , .on_blog_section_txt p{
             font-size: 14px;
             color: #2E3337;
         }
 
-        .trending_Offers_btn {
+        .trending_Offers_btn, .on_blog_btn{
             display: block;
             margin: auto;
             padding: 12px;
@@ -272,7 +272,7 @@
 
         }
 
-        .trending_Offers_btn:hover {
+        .trending_Offers_btn:hover ,.on_blog_btn:hover {
             cursor: pointer;
             background-color: #88d2cf;
         }
@@ -365,6 +365,165 @@
             margin-top: -50px;
 
         }
+
+
+
+        /* footer css */
+
+        .footer1 {
+    background-color: rgb(177, 173, 173);
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    width: 100%;
+    padding: 1px;
+    margin-top: -550px;
+}
+
+.footer2 {
+    background-color:#FFFFFF;
+    color: #333333;
+    padding: 25px;
+    padding-bottom: 77px;
+
+}
+
+.labelBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+
+}
+
+.label-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.labelBox>div>img {
+    width: 36px;
+
+
+
+}
+
+.label-text>div {
+    margin-right: 15px;
+    margin-left: 15px;
+    align-self: flex-end;
+}
+
+hr {
+    background-color: rgb(85, 84, 84);
+
+
+    margin-bottom: 25px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.details>div {
+
+    font-size: 14px;
+}
+
+.details>p {
+    width: 75px;
+}
+
+.countries {
+    width: 28px;
+}
+
+.last {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
+.last>div {
+    margin-top: 205px;
+}
+
+.last>h2 {
+
+    font-size: 35px;
+}
+
+.last>div>button {
+    border-radius: 55px;
+    width: 100px;
+    height: 30px;
+    background-color: transparent;
+    color: #333333;
+    background-color: #6cbdb7;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.last>div>input {
+    height: 55px;
+    width: 100%;
+
+}
+
+.last>div {
+    display: flex;
+}
+
+.labelInput2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.labelInput {
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+    font-size: 20px;
+    width: 310px;
+
+    border-radius: 15px;
+}
+
+span {
+    margin-right: 15px;
+}
+
+.last2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+
+    font-size: 14px;
+}
+
+#icons>img {
+    width: 40px;
+}
+
+.details>div>h6 {
+    font-size: 18px;
+}
+
+.gapText>p{
+    line-height: 20px;
+    
+}
     </style>
 </head>
 
@@ -1208,6 +1367,205 @@
 
 
     </div>
+
+
+    <h1 class="section_txt">Over On the Blog...</h1>
+
+    <div id="on_blog">
+        
+
+        <div class="on_blog_section">
+            <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/10/original-0328-STDCRE-33849-WC-SS-April-Photography-Batching-Shot07-500x500-030310.jpg"
+                alt="error">
+            <span class="on_blog_txt">
+                <h3>$21 SkinCeuticals Gift</h3>
+                <p>SkinCeuticals believes in celebrating the skin-protective and rejuvenating powers of vitamin C every day, but this year they’re making sure your eyes and lips get in on the antioxidant action (and benefits).</p>
+                <button class="on_blog_btn">Read More</button>
+            </span>
+    
+        </div>
+
+        <div class="on_blog_section">
+            <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/51/original-0224-STDCRE-32153-SS-BME-Skinstore-March-2022-Photography-Batching-Shot_13-500x500-023351.jpg"
+                alt="error">
+            <span class="on_blog_txt">
+                <h3>Which TriPollar Device is Right for You?</h3>
+                <p>In 2008, TriPollar launched themselves into the home beauty sphere with an aim to innovate the technology behind at-home treatments and devices.</p>
+                <button class="on_blog_btn">Read More</button>
+            </span>
+    
+        </div>
+
+        <div class="on_blog_section">
+            <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/53/2004_THG0034749_SS_MAY_2022_SHOT_33_MAIN-071653.jpg"
+                alt="error">
+            <span class="on_blog_txt">
+                <h3>The HairStore at SkinStore: What Your Routine Needs</h3>
+                <p>Give your hair the same love and care you give your skin by shopping The HairStore at SkinStore.</p>
+                <button class="on_blog_btn">Read More</button>
+            </span>
+    
+        </div>
+    </div>
+
+
+    <!-- footer part of page -->
+
+
+    <div class="footer1">
+        <p>Website feedback? Let us know ></p>
+    </div>
+    <div class="footer2">
+
+        <div class="labelBox">
+            <div class="label-text">
+                
+
+                <div>
+                    <span><i class="fa-solid fa-shop"></i> Find a store</span>
+                    <p><i class="fa-solid fa-shop-lock"></i> Choose Your Store</p>
+                </div>
+            </div>
+            <div class="label-text">
+                <div>
+                    <span><i class="fa-solid fa-hand-holding-hand"></i> Live Beauty Help</span>
+                    <p><i class="fa-solid fa-comment-slash"></i> Chat is unavailable</p>
+                </div>
+            </div>
+            <div class="label-text">
+
+                <div>
+                    <span>
+                        <i class="fa-solid fa-phone"></i> 1-877-737-4672
+                    </span>
+                    <p><i class="fa-solid fa-phone-office"></i> TTY: 1-888-866-9845 </p>
+                </div>
+            </div>
+            <div class="label-text">
+
+                <div>
+                    <span><i class="fa-solid fa-mobile-screen-button"></i> Get the App</span>
+                    <p><i class="fa-solid fa-comment-sms"></i> Text "APP" to 36681</p>
+                </div>
+            </div>
+            <div class="label-text">
+
+                <div>
+                    <span><i class="fa-solid fa-credit-card-front"></i> Skin Store Credit Card Program
+
+                    </span>
+                    <p><i class="fa-brands fa-discourse"></i> Want 25% off your Skin Store purchase1? DETAILS</p>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="details">
+            <div>
+                <h6>About Skin Store</h6>
+                <p>About Skin Store</p>
+                <p>Key Workers Discount</p>
+                <p>About Us</p>
+                <p> Affiliate Program</p>
+                <p> Brand Directory</p>
+                <p> Coupon Codes</p>
+                <p> Refer A Friend</p>
+                <p> Gift Cards</p>
+                <p> Student Discount</p>
+                <p> Join SkinStore Experts</p>
+                <p> Checkout on Instagram</p>
+
+
+            </div>
+
+            <div>
+                <h6>My Skin Store</h6>
+                <p> Beauty Insider</p>
+                <p> Skin Store Credit Card</p>
+                <p> Community Profile</p>
+                <p> Order Status</p>
+                <p> Purchase History</p>
+                <p> Account Settings</p>
+                <p> Beauty Advisor Recommendations</p>
+                <p> Beauty Offers</p>
+                <p> Quizzes & Buying Guides</p>
+                <p> Rewards Bazaar</p>
+                <p> Loves</p>
+                <p> Book a Reservation</p>
+            </div>
+
+            <div>
+                <h6>Help</h6>
+                <p>
+                    Customer Service</p>
+                <p> Returns & Exchanges</p>
+                <p> Delivery and Pickup Options</p>
+                <p> Shipping</p>
+                <p> Billing</p>
+                <p> International Shipments</p>
+                <p> Beauty Services FAQ</p>
+                <p> Skin Store at Kohl's</p>
+                <p> Skin Store Inside JCPenney</p>
+                <p> Store Locations</p>
+                <p> Online Ordering</p>
+                <p> Klarna</p>
+                <p> Accessibility</p>
+
+
+            </div>
+
+
+            <div>
+                <h6>Region & Language</h6>
+                <p><img class="countries" src="https://www.sephora.com/img/ufe/flags/us.svg" /> United States - English
+                </p>
+                <p><img class="countries" src="https://www.sephora.com/img/ufe/flags/ca.svg" /> Cannada - English</p>
+                <p><img class="countries" src="https://www.sephora.com/img/ufe/flags/ca.svg" /> Cannada - Francais</p>
+
+
+            </div>
+            <div class="last">
+                <h2>We Belong to
+                    Something Beautiful</h2>
+                <div class="labelInput2">
+
+                    <div class="labelInput">
+
+                        <label for="sign">Sign up for Skin Store Emails</label>
+                        <input type="text" placeholder="Enter your email address" />
+                    </div>
+                    <button id="labelInput_btn">Sign up</button>
+                </div>
+
+            </div>
+
+        </div>
+        <hr />
+        <div class="last2">
+            <div>
+                <p>© 2022 Skin Store USA, Inc. All rights reserved.</p>
+                <span>Privacy Policy</span> <span>Terms of Use Accessibility</span>
+                <span>Sitemap</span> <span> CA - Do Not Sell My Personal Information</span>
+            </div>
+
+            <div id="icons">
+                <img src="https://www.sephora.com/img/ufe/icons/instagram-ko.svg" />
+                <img src="https://www.sephora.com/img/ufe/icons/facebook-ko.svg" />
+                <img src="https://www.sephora.com/img/ufe/icons/twitter-ko.svg" />
+                <img src="https://www.sephora.com/img/ufe/icons/youtube-ko.svg" />
+                <img src="https://www.sephora.com/img/ufe/icons/pinterest-ko.svg" />
+                <img src="https://www.sephora.com/img/ufe/icons/snapchat-ko.svg" />
+
+                <img src="https://www.sephora.com/img/ufe/icons/tiktok-ko.svg" />
+
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+
+   
 
 </body>
 
