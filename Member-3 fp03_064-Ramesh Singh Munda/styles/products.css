@@ -1,0 +1,43 @@
+#container {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+#filter-section {
+    border: 1px solid black;
+    width: 20%;
+}
+#product-section {
+    /* border: 1px solid black; */
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+#product {
+    /* border: 1px solid black; */
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    cursor: pointer;
+    padding: 10px;
+    transition: 1s;
+}
+#product:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+#content > img {
+    display: block;
+    margin: auto;
+} 
+
+#product > button {
+    width: 100%;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
