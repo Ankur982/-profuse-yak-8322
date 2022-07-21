@@ -1,16 +1,39 @@
 // getData
 let getData = async (url)=> {
+
+
+
     let res = await fetch(url);
     // console.log("res:", res);
 
     let data = await res.json();
     // console.log('data:', data);
-     return data;
+    
+    return data;
 }
+
+
 
 // appendData
 let appendData = (data, container)=> {
-    console.log('data:', data);
+    // console.log('data:', data);
+
+    container.innerHTML = null;
+
+   
+    
+    // sortLTH
+    // data.sort((a, b)=> {
+    //     return a.price - b.price;
+    // });
+
+
+    // sorting
+    
+    // sortHTL
+    // data.sort((a, b)=> {
+    //     return b.price - a.price;
+    // });
 
     data.forEach((el)=> {
         // product
@@ -69,7 +92,7 @@ let appendData = (data, container)=> {
         // product.append(image, brand, name, price, buy);
         container.append(product);
     });
-}
+};
 
 // // clickProduct
 let clickProduct = (el)=> {
@@ -81,7 +104,7 @@ let clickProduct = (el)=> {
     localStorage.setItem("product_id", JSON.stringify(product_id));
 
     window.location.href = "../product.html";
-}
+};
 
 
 // quickBuy
@@ -94,7 +117,9 @@ let quickBuy = (el)=> {
     localStorage.setItem("cart", JSON.stringify(product));
 
     window.alert("Added to Your Cart");
-}
+};
+
+
 
 // export
 export {getData, appendData};
