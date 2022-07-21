@@ -594,6 +594,34 @@ let navbar=()=>{
         </li>
     </ul>
 </div>
+
+
+<!--DRND_slider here-->
+<div id="DRND_slider">
+    <div class="DRND_slid">
+        <p><i class="fa-solid fa-truck"></i> FREE US Shipping Over $49
+        </p>
+    </div>
+    <div class="DRND_slid">
+        <p><i class="fa-solid fa-rotate"></i> Refer a Friend, Get $15</p>
+    </div>
+    <div class="DRND_slid">
+        <p><i class="fa-solid fa-user-plus"></i></i> New Customers Save 20% - Use Code NEWBIE</p>
+    </div>
+    <div class="DRND_slid">
+        <p><i class="fa-solid fa-mobile-screen-button"></i> Download Our App</p>
+    </div>
+</div>
+
+
+<!--strip_banner here-->
+
+<div id="strip_banner">
+    <div id="strip_banner_txt">
+        15% off with code SS15 + 16-Piece Beauty Bag (Worth $106) @ $150 | Shop now >
+    </div>
+
+</div>
 `
 };
 
