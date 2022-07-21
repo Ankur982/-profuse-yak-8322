@@ -1,0 +1,156 @@
+/* footer css */
+
+.footer1 {
+    background-color: rgb(177, 173, 173);
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    width: 100%;
+    padding: 1px;
+    margin-top: -550px;
+}
+
+.footer2 {
+    background-color: #FFFFFF;
+    color: #333333;
+    padding: 25px;
+    padding-bottom: 77px;
+
+}
+
+.labelBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+
+}
+
+.label-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.labelBox>div>img {
+    width: 36px;
+
+
+
+}
+
+.label-text>div {
+    margin-right: 15px;
+    margin-left: 15px;
+    align-self: flex-end;
+}
+
+hr {
+    background-color: rgb(85, 84, 84);
+
+
+    margin-bottom: 25px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.details>div {
+
+    font-size: 14px;
+}
+
+.details>p {
+    width: 75px;
+}
+
+.countries {
+    width: 28px;
+}
+
+.last {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
+.last>div {
+    margin-top: 205px;
+}
+
+.last>h2 {
+
+    font-size: 35px;
+}
+
+.last>div>button {
+    border-radius: 55px;
+    width: 100px;
+    height: 30px;
+    background-color: transparent;
+    color: #333333;
+    background-color: #6cbdb7;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.last>div>input {
+    height: 55px;
+    width: 100%;
+
+}
+
+.last>div {
+    display: flex;
+}
+
+.labelInput2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.labelInput {
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+    font-size: 20px;
+    width: 310px;
+
+    border-radius: 15px;
+}
+
+span {
+    margin-right: 15px;
+}
+
+.last2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+
+    font-size: 14px;
+}
+
+#icons>img {
+    width: 40px;
+}
+
+.details>div>h6 {
+    font-size: 18px;
+}
+
+.gapText>p {
+    line-height: 20px;
+
+}
