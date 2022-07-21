@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Page</title>
+    <title>Login Page</title>
     <style>
         * {
             padding: 0;
@@ -14,6 +14,10 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        #login_page_box{
+            display: flex;
+            
+        }
         #reg_page_navbar {
             width: 100%;
             height: 71px;
@@ -69,19 +73,38 @@
             top: 20px;
             border: none;
             height: 2px;
-            margin-top: 50px;
+            margin-top: 10px;
             color: #f2f2f2 ;
         }
 
         #signup-form-div {
-            width: 705px;
+            width: 500px;
             padding: 32px;
             margin: auto;
             margin-top: 50px;
             padding: 35px 30px;
-            border-radius: 20px;
+            border-radius: 10px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
             background-color: #ffff;
+            margin-bottom: 80px;
+            margin-right: 15px;
+        }
+
+        #new_costomer{
+            width: 500px;
+            padding: 32px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 35px 30px;
+            background-color: #FFFFFF;
+            margin-left: 15px;
+            border-radius: 10px;
+        }
+        #new_costomer h1{
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: #FFFFFF;
+            margin-top: 40px;
         }
 
         #signup-form-div h1 {
@@ -100,11 +123,11 @@
             margin: 8px 0;
             box-sizing: border-box;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            border-radius: 10px;
+            border-radius: 5px;
             background-color: #FFFFFF;
         }
 
-        #submit {
+        #submit,#new_costomer_reg {
             width: 100%;
             height: 50px;
             display: block;
@@ -117,11 +140,14 @@
 
         }
 
-        #submit:hover {
+        #submit:hover, #new_costomer_reg:hover{
             background-color:#6cbdb7;
             color: #333333;
             
 
+        }
+        .sign_up_social:hover{
+            background-color:#f2f2f2;
         }
         .int_txt{
             font-size: 14px;
@@ -144,49 +170,51 @@
 
 
 
-    <div id="signup-form-div">
-        <h1>About You</h1>
+    <div id="login_page_box">
+        <div id="signup-form-div">
+            <h1>Existing Customers</h1>
+    
+            <h2 class="h2_txt">Login Page</h2>
+            <label for="name">*Full Name</label>
+            <input type="text" placeholder="Enter Your Name" id="name"><br><br>
+    
+            
+            <label for="password">*Password</label>
+            <input type="password" placeholder="Enter Your Password" id="password">
+            <p  class="int_txt"><a class="t_d" href="/">FORGOTTEN YOUR PASSWORD?</a></p><br><br>
+    
+    
+            <input type="submit" id="submit">
+    
+            <hr class="hr_line">
+            <h1>Or, Continue with</h1>
+    
+            <h2 class="h2_txt">Login With</h2>
+            <div id="sign_up_with">
+                <div class="sign_up_social"><img
+                        src="https://png.pngtree.com/png-clipart/20180515/ourmid/pngtree-facebook-logo-facebook-icon-png-image_3566127.png"
+                        alt="error"> Facebook</div>
+                <div class="sign_up_social"><img
+                        src="https://icon-library.com/images/download-google-icon/download-google-icon-25.jpg" alt="error">
+                    Google</div>
+            </div>
 
-        <h2 class="h2_txt">Sign Up With</h2>
-        <div id="sign_up_with">
-            <div class="sign_up_social"><img
-                    src="https://png.pngtree.com/png-clipart/20180515/ourmid/pngtree-facebook-logo-facebook-icon-png-image_3566127.png"
-                    alt="error"> Facebook</div>
-            <div class="sign_up_social"><img
-                    src="https://icon-library.com/images/download-google-icon/download-google-icon-25.jpg" alt="error">
-                Google</div>
+
+    
         </div>
 
-        <hr class="hr_line">
-
-        <h1>Or Create An Account</h1>
-
-        <h2 class="h2_txt">Signup Page</h2>
-        <label for="name">*Full Name</label>
-        <input type="text" placeholder="Enter Your Name" id="name"><br><br>
-
-        <label for="email">*Email address</label>
-        <input type="email" placeholder="Enter Your Email" id="email"><br><br>
-
-        <label for="contact">*Cell Phone Number</label>
-        <input type="number" placeholder="Enter Your Contact No." id="contact">
-        <p class="int_txt">We will use this number to send occasional promotional messages.</p><br><br>
-
-        
-        <label for="password">*Password</label>
-        <input type="password" placeholder="Enter Your Password" id="password">
-        <p class="int_txt">Include a minimum of 6 characters, and contain at least 1 number</p><br><br>
 
 
-        <label for="referral">Referral Code(Optional)</label>
-        <input type="text" placeholder="Enter Referral Code" id="referral">
-        <p class="int_txt">* Your referrals discount is automatically applied at cart</p><br><br>
 
+        <div id="new_costomer">
+            <h1>New Customers</h1>
+            <button id="new_costomer_reg">Register</button>
+        </div>
 
-        <input type="submit" id="submit"><br><br>
-        <p>By proceeding, you are confirming that you agree to our <a class="t_d" href="">Terms and Conditions</a> and  <a class="t_d" href="">Privacy Policy</a></p>
 
     </div>
+
+    
 
 
 </body>
