@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Referrals Page</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <style>
+        #referrals_page {
+            width: 1400px;
+            margin: auto;
+        }
+
+        #home_btn {
+            margin-top: 30px;
+            margin-left: 20px;
+            border: none;
+            background-color: #FFFFFF;
+        }
+
+        #home_btn:hover {
+            color: #FFFFFF;
+            cursor: pointer;
+            background-color: #6cbdb7;
+        }
+
+        .referral_img {
+            width: 1400px;
+            display: block;
+            margin: auto;
+        }
+
+        .referral_img>img {
+            width: 100%;
+            height: 584px;
+            margin-top: 40px;
+        }
+
+        .referral_txt {
+            text-align: center;
+        }
+
+        .referral_btn {
+            width: 310px;
+            height: 42.2px;
+            display: block;
+            margin: auto;
+            padding: 12px;
+            font-size: 14px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            text-align: center;
+            box-sizing: border-box;
+            border-style: solid;
+            background-color: #333333;
+            text-decoration: none;
+        }
+
+        .referral_btn:hover {
+            cursor: pointer;
+            background-color: #6cbdb7;
+        }
+
+        #referral_steps {
+            width: 1400px;
+            height: 509px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 20px;
+            margin: auto;
+            padding: 16px;
+            margin-top: 30px;
+        }
+
+        .referral_steps_box>img {
+            width: 100%;
+            border-radius: 50%;
+        }
+        #footer{
+            margin-top: 650px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbarr">
+    </div>
+
+    <div id="referrals_page">
+        <button id="home_btn">Home</button>
+        <div class="referral_img">
+            <img src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/13/RX_BB_Banner_Desktop_%281%29-034713.png"
+                alt="error">
+        </div>
+
+        <div class="referral_txt_box">
+            <h1 class="referral_txt">Welcome</h1>
+            <p class="referral_txt">Want to get money off your next order? Introduce a friend to our site today and not
+                only do they receive discount but you will receive credits too!</p>
+            <button class="referral_btn">Login</button>
+        </div>
+
+        <div id="referral_steps">
+            <div class="referral_steps_box">
+                <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/19/Add_a_heading_%285%29-043319.png"
+                    alt="error">
+                <h3 class="referral_txt">Step 1</h3>
+                <p class="referral_txt">Share your unique referral code or link with a friend.</p>
+            </div>
+
+
+            <div class="referral_steps_box">
+                <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/01/Add_a_heading_%288%29-044201.png"
+                    alt="error">
+                <h3 class="referral_txt">Step 2</h3>
+                <p class="referral_txt">Your friend receives 25% off their first order when they spend $50 or more.</p>
+            </div>
+
+            <div class="referral_steps_box">
+                <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/11/Add_a_heading_%2811%29-044911.png"
+                    alt="error">
+                <h3 class="referral_txt">Step 3</h3>
+                <p class="referral_txt">You earn $15 for every successful referral you make.</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+     <!-- footer part of page -->
+
+     <div id="footer">
+
+
+    </div>
+
+
+</body>
+
+</html>
+<script type="module">
+
+    import navbar from "./components/navbar.js";
+
+    document.getElementById("navbarr").innerHTML=navbar();
+
+
+</script>
+
+<script type="module">
+
+    import footer from "./components/footer.js";
+
+    document.getElementById("footer").innerHTML=footer();
+
+    
+
+</script>
