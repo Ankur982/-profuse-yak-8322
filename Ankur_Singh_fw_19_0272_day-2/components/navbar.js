@@ -8,14 +8,14 @@ let navbar = () => {
 
         <div id="header_search">
             <input id="header_search_input" type="text" placeholder="Search for a product or brand">
-            <i class='fa-solid fa-magnifying-glass'></i>
+            <i class='fa-solid fa-magnifying-glass' id="searchicon"></i>
 
         </div>
 
         <div id="box_account_cart">
             <div id="account">
                 <p id="user_account"><select name="current_user" id="current_user">
-                <option class="dash_options" value="Account">👤Account </option>
+                <option class="dash_options" value="">👤Account </option>
                 <option class="dash_options" value="Login">Login</option>
                 <option class="dash_options" value="Register">Register</option>
                 <option class="dash_options" value="Wishlist">Wishlist</option>

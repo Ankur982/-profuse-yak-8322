@@ -149,15 +149,18 @@
         }
 
         #submit:hover,
-        #new_costomer_reg:hover {
+        #new_costomer_reg:hover{
             background-color: #6cbdb7;
             color: #333333;
+            cursor: pointer;
 
 
         }
 
         .sign_up_social:hover {
             background-color: #f2f2f2;
+            cursor: pointer;
+
         }
 
         .int_txt {
@@ -169,11 +172,12 @@
             color: #333333;
             font-weight: 500;
         }
+       
     </style>
 </head>
 
 <body>
-    <div id="reg_page_navbar">
+    <div id="reg_page_navbar" onclick="myhome()">
         <img src="https://s1.thcdn.com/enterprise/assets/skstr-global-113e023e-ecc9-45df-abad-eb92ce1956c9-logo-default.svg"
             alt="">
     </div>
@@ -219,7 +223,7 @@
 
         <div id="new_costomer">
             <h1>New Customers</h1>
-            <button id="new_costomer_reg">Register</button>
+            <button id="new_costomer_reg" onclick="Register()">Register</button>
         </div>
 
 
@@ -268,9 +272,20 @@
         } else {
             localStorage.setItem("loginData", JSON.stringify(current_user));
             alert("Login Success....!")
-            window.location.href = "home_page.html";
+            window.location.href = "./home_page.html";
         }
 
 
     }
+
+    function myhome(){
+        window.location.href="./home_page.html"
+    }
+
+
+    function Register(){
+        window.location.href="./registration.html"
+    }
+
+
 </script>

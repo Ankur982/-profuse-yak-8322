@@ -292,7 +292,19 @@
 }
 
 #current_user>.dash_options{
-    background-color: #333333;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #333333;
 }
 
+#searchicon{
+  
+   border: 1px solid;
+   padding: 12px;
+   margin: 0;
+   
+}
+
+#searchicon:hover{
+    background-color: #f2f2f2;
+    cursor: pointer;
+}

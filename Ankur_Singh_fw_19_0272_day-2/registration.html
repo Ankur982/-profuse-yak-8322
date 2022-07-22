@@ -146,7 +146,7 @@
 </head>
 
 <body>
-    <div id="reg_page_navbar">
+    <div id="reg_page_navbar" onclick="myhome()">
         <img src="https://s1.thcdn.com/enterprise/assets/skstr-global-113e023e-ecc9-45df-abad-eb92ce1956c9-logo-default.svg"
             alt="">
     </div>
@@ -236,6 +236,7 @@
 
 
 
+
         function checkEmail(email) {
             let filtered = dataArr.filter(function (elem) {
                 return email === elem.email;
@@ -261,5 +262,10 @@
         }
 
 
+    }
+
+
+    function myhome(){
+        window.location.href="./home_page.html"
     }
 </script>
