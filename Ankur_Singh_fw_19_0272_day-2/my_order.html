@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+         * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #my_account_order_cont{
+            width: 1400px;
+            margin: auto;
+        }
+        .my_account_order_txt{
+            margin-top: 50px;
+            color: #2E3337;
+            font-size: 14px;
+            font-weight: 100;
+        }
+        a{
+            text-decoration: none;
+            color: #2E3337;
+        }
+        .hr_line {
+            width: 1400px;
+            
+        }
+
+        #my_account {
+            width: 1400px;
+            height: 119px;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            margin-top:-20px;
+            padding: 16px 32px;
+            margin-bottom: -50px;
+        }
+
+        #my_acc_detail {
+            width: 668px;
+            height: 87px;
+
+            color: #2E3337;
+            margin-left: 20px;
+        }
+
+        .my_acc_btn2 {
+            width: 87px;
+            height: 44px;
+            margin-top: 20px;
+            background-color: #FFFFFF;
+            font-size: 14px;
+            margin-right: 20px;
+            color: #333333;
+            text-transform: uppercase;
+            text-align: center;
+            box-sizing: border-box;
+            border-style: solid;
+            background-color:#FFFFFF ;
+            text-decoration: none;
+        }
+        .my_acc_btn1{
+            width: 140px;
+            height: 44px;
+            margin-top: 20px;
+            background-color: #FFFFFF;
+            font-size: 14px;
+            margin-right: 20px;
+            color: #333333;
+            text-transform: uppercase;
+            text-align: center;
+            box-sizing: border-box;
+            border-style: solid;
+            background-color:#FFFFFF ;
+            text-decoration: none;
+        }
+
+        .my_acc_btn1:hover ,.my_acc_btn2:hover {
+            cursor: pointer;
+            background-color: #6cbdb7;
+        }
+
+
+        .int_txt {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 200;
+        }
+
+        .your_section {
+            width: 1400px;
+            color: #2E3337;
+            padding: 16px 16px 14px;
+            margin: auto;
+        }
+        .section_txt {
+            text-align: center;
+            font-weight: 200;
+            font-size: 36px;
+        }
+
+        #footer{
+            margin-top: 600px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="navbar">
+    </div>
+<div id="my_account_order_cont">
+    <p class="my_account_order_txt"><a href="/">My Account</a> / Order Information</p>
+</div>
+<hr class="hr_line">
+    
+
+<div id="my_account">
+    <div id="my_acc_detail">
+        <h1>Order Information</h1>
+    </div>
+    <div>
+        <button class="my_acc_btn1">ACCOUNT HOME</button>
+        <button class="my_acc_btn2">LOG OUT</button>
+    </div>
+
+</div>
+
+<hr class="hr_line">
+
+<div class="your_section">
+    <h1 class="section_txt">Active Orders</h1>
+    <div id="your_order_section">
+        <p class="int_txt">You currently have no outstanding orders.</p>
+    </div>
+</div>
+
+
+
+<hr class="hr_line">
+
+<div class="your_section">
+    <h1 class="section_txt">Completed Orders</h1>
+    <div id="your_subs_section">
+        <p class="int_txt">You currently have no completed orders.</p>
+    </div>
+</div>
+
+<hr class="hr_line">
+
+
+ <!-- footer part of page -->
+
+ <div id="footer">
+
+
+</div>
+    
+</body>
+</html>
+<script type="module">
+
+    import navbar from "./components/navbar.js";
+
+    document.getElementById("navbar").innerHTML=navbar();
+
+
+
+</script>
+<script type="module">
+
+    import footer from "./components/footer.js";
+
+    document.getElementById("footer").innerHTML=footer();
+
+    
+
+</script>

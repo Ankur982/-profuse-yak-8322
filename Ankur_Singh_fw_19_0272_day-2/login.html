@@ -14,17 +14,23 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        #login_page_box{
+        #login_page_box {
             display: flex;
-            
+
         }
+
         #reg_page_navbar {
             width: 100%;
             height: 71px;
             background-color: #FFFFFF;
             padding-top: 8px;
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 1200;
 
         }
+
 
         #reg_page_navbar>img {
             width: 213px;
@@ -34,7 +40,7 @@
         }
 
         #signup-form-div {
-           
+
             background-color: #FFFFFF;
         }
 
@@ -74,7 +80,7 @@
             border: none;
             height: 2px;
             margin-top: 10px;
-            color: #f2f2f2 ;
+            color: #f2f2f2;
         }
 
         #signup-form-div {
@@ -90,7 +96,7 @@
             margin-right: 15px;
         }
 
-        #new_costomer{
+        #new_costomer {
             width: 500px;
             padding: 32px;
             margin: auto;
@@ -100,7 +106,8 @@
             margin-left: 15px;
             border-radius: 10px;
         }
-        #new_costomer h1{
+
+        #new_costomer h1 {
             text-align: center;
             margin-bottom: 30px;
             background-color: #FFFFFF;
@@ -127,7 +134,8 @@
             background-color: #FFFFFF;
         }
 
-        #submit,#new_costomer_reg {
+        #submit,
+        #new_costomer_reg {
             width: 100%;
             height: 50px;
             display: block;
@@ -140,25 +148,27 @@
 
         }
 
-        #submit:hover, #new_costomer_reg:hover{
-            background-color:#6cbdb7;
+        #submit:hover,
+        #new_costomer_reg:hover {
+            background-color: #6cbdb7;
             color: #333333;
-            
+
 
         }
-        .sign_up_social:hover{
-            background-color:#f2f2f2;
+
+        .sign_up_social:hover {
+            background-color: #f2f2f2;
         }
-        .int_txt{
+
+        .int_txt {
             font-size: 14px;
             font-weight: 300;
         }
 
-        .t_d{
+        .t_d {
             color: #333333;
             font-weight: 500;
         }
-        
     </style>
 </head>
 
@@ -173,34 +183,35 @@
     <div id="login_page_box">
         <div id="signup-form-div">
             <h1>Existing Customers</h1>
-    
+
             <h2 class="h2_txt">Login Page</h2>
-            <label for="name">*Full Name</label>
-            <input type="text" placeholder="Enter Your Name" id="name"><br><br>
-    
-            
+            <label for="email">*Email address</label>
+            <input type="email" placeholder="Enter Your email" id="user_Email"><br><br>
+
+
             <label for="password">*Password</label>
-            <input type="password" placeholder="Enter Your Password" id="password">
-            <p  class="int_txt"><a class="t_d" href="/">FORGOTTEN YOUR PASSWORD?</a></p><br><br>
-    
-    
+            <input type="password" placeholder="Enter Your Password" id="user_Password">
+            <p class="int_txt"><a class="t_d" href="/">FORGOTTEN YOUR PASSWORD?</a></p><br><br>
+
+
             <input type="submit" id="submit">
-    
+
             <hr class="hr_line">
             <h1>Or, Continue with</h1>
-    
+
             <h2 class="h2_txt">Login With</h2>
             <div id="sign_up_with">
                 <div class="sign_up_social"><img
                         src="https://png.pngtree.com/png-clipart/20180515/ourmid/pngtree-facebook-logo-facebook-icon-png-image_3566127.png"
                         alt="error"> Facebook</div>
                 <div class="sign_up_social"><img
-                        src="https://icon-library.com/images/download-google-icon/download-google-icon-25.jpg" alt="error">
+                        src="https://icon-library.com/images/download-google-icon/download-google-icon-25.jpg"
+                        alt="error">
                     Google</div>
             </div>
 
 
-    
+
         </div>
 
 
@@ -214,9 +225,52 @@
 
     </div>
 
-    
+
 
 
 </body>
 
 </html>
+
+
+<script>
+    let user = JSON.parse(localStorage.getItem("userData"))
+    document.querySelector("#submit").addEventListener("click", mySignIn);
+
+
+
+    function mySignIn(event) {
+        event.preventDefault();
+        let data = {
+            user_email: document.querySelector("#user_Email").value,
+            user_Password: document.querySelector("#user_Password").value
+        };
+
+
+        function checkLogin(user_email, user_Password) {
+            let filter = user.filter(function (elem) {
+                return elem.email == user_email && elem.password == user_Password
+            });
+
+
+            if (filter.length > 0) {
+                return filter;
+            } else {
+                return false;
+            }
+        }
+
+        let current_user = checkLogin(data.user_email, data.user_Password);
+
+
+        if (current_user == false) {
+            alert("invalid Credentials");
+        } else {
+            localStorage.setItem("loginData", JSON.stringify(current_user));
+            alert("Login Success....!")
+            window.location.href = "home_page.html";
+        }
+
+
+    }
+</script>
