@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            background-color: #f2f2f2;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #reg_page_navbar {
+            width: 100%;
+            height: 71px;
+            background-color: #FFFFFF;
+            padding-top: 8px;
+
+        }
+
+        #reg_page_navbar>img {
+            width: 213px;
+            height: 60px;
+            padding-left: 70px;
+            background-color: #FFFFFF;
+        }
+
+        #signup-form-div {
+           
+            background-color: #FFFFFF;
+        }
+
+        .h2_txt {
+            background-color: #FFFFFF;
+            margin-bottom: 30px;
+        }
+
+        #sign_up_with {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column: 1, auto;
+            gap: 20px;
+            background-color: #FFFFFF;
+
+        }
+
+        .sign_up_social {
+            border: 1px solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;
+            font-size: 18px;
+            background-color: #FFFFFF;
+        }
+
+        .sign_up_social>img {
+            width: 35px;
+            background-color: #FFFFFF;
+        }
+
+        .hr_line {
+            width: 100%;
+            top: 20px;
+            border: none;
+            height: 2px;
+            margin-top: 50px;
+            color: #f2f2f2 ;
+        }
+
+        #signup-form-div {
+            width: 705px;
+            padding: 32px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 35px 30px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            background-color: #ffff;
+            margin-bottom: 80px;
+        }
+
+        #signup-form-div h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: #FFFFFF;
+            margin-top: 40px;
+        }
+
+        input[type=text],
+        input[type=number],
+        input[type=email],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 5px;
+            background-color: #FFFFFF;
+        }
+
+        #submit {
+            width: 100%;
+            height: 50px;
+            display: block;
+            margin: auto;
+            cursor: pointer;
+            background-color: #333333;
+            color: #FFFFFF;
+            font-size: 25px;
+            font-weight: 600px;
+
+        }
+
+        #submit:hover {
+            background-color:#6cbdb7;
+            color: #333333;
+            
+
+        }
+        .sign_up_social:hover{
+            background-color:#f2f2f2;
+        }
+        .int_txt{
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .t_d{
+            color: #333333;
+            font-weight: 500;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="reg_page_navbar">
+        <img src="https://s1.thcdn.com/enterprise/assets/skstr-global-113e023e-ecc9-45df-abad-eb92ce1956c9-logo-default.svg"
+            alt="">
+    </div>
+
+
+
+    <div id="signup-form-div">
+        <h1>About You</h1>
+
+        <h2 class="h2_txt">Sign Up With</h2>
+        <div id="sign_up_with">
+            <div class="sign_up_social"><img
+                    src="https://png.pngtree.com/png-clipart/20180515/ourmid/pngtree-facebook-logo-facebook-icon-png-image_3566127.png"
+                    alt="error"> Facebook</div>
+            <div class="sign_up_social"><img
+                    src="https://icon-library.com/images/download-google-icon/download-google-icon-25.jpg" alt="error">
+                Google</div>
+        </div>
+
+        <hr class="hr_line">
+
+        <h1>Or Create An Account</h1>
+
+        <h2 class="h2_txt">Signup Page</h2>
+        <label for="name">*Full Name</label>
+        <input type="text" placeholder="Enter Your Name" id="name"><br><br>
+
+        <label for="email">*Email address</label>
+        <input type="email" placeholder="Enter Your Email" id="email"><br><br>
+
+        <label for="contact">*Cell Phone Number</label>
+        <input type="number" placeholder="Enter Your Contact No." id="contact">
+        <p class="int_txt">We will use this number to send occasional promotional messages.</p><br><br>
+
+        
+        <label for="password">*Password</label>
+        <input type="password" placeholder="Enter Your Password" id="password">
+        <p class="int_txt">Include a minimum of 6 characters, and contain at least 1 number</p><br><br>
+
+
+        <label for="referral">Referral Code(Optional)</label>
+        <input type="text" placeholder="Enter Referral Code" id="referral">
+        <p class="int_txt">* Your referrals discount is automatically applied at cart</p><br><br>
+
+
+        <input type="submit" id="submit"><br><br>
+        <p>By proceeding, you are confirming that you agree to our <a class="t_d" href="">Terms and Conditions</a> and  <a class="t_d" href="">Privacy Policy</a></p>
+
+    </div>
+
+
+</body>
+
+</html>

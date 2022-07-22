@@ -1,0 +1,207 @@
+
+/* 
+slide show css */
+#slideshow {
+    /* height: 600px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: -30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 50px 0;
+
+}
+
+
+#slideshow>img {
+    width: 1400px;
+    height: 600px;
+    border-radius: 40px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+#trending_Offers,
+#on_blog {
+    width: 1400px;
+    height: 1220px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    margin: auto;
+    padding: 16px;
+}
+
+.section_txt {
+    text-align: center;
+}
+
+.trending_Offers_section .on_blog_section {
+    height: 610px;
+}
+
+.trending_Offers_section>img,
+.on_blog_section>img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.trending_Offers_txt,
+.on_blog_txt {
+    text-align: center;
+}
+
+.trending_Offers_txt h3,
+.on_blog_section_txt h3 {
+    font-size: 18px;
+    color: #333333;
+}
+
+.trending_Offers_txt p,
+.on_blog_section_txt p {
+    font-size: 14px;
+    color: #2E3337;
+}
+
+.trending_Offers_btn,
+.on_blog_btn ,.swiper-slide, .absBtn{
+    display: block;
+    margin: auto;
+    padding: 12px;
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    box-sizing: border-box;
+    border-style: solid;
+    background-color: #fff;
+    text-decoration: none;
+
+}
+
+.trending_Offers_btn:hover,
+.on_blog_btn:hover , .absBtn:hover{
+    cursor: pointer;
+    background-color: #88d2cf;
+}
+
+
+#shopByCategory {
+    width: 1400px;
+    height: 196px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 1, auto;
+    gap: 20px;
+    margin: auto;
+    padding: 16px;
+
+}
+
+.shopByCategory_section>img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+#Buying_Right_Now {
+    margin-top: 50px;
+    width: 1400px;
+    height: 560px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1, auto;
+    gap: 20px;
+    margin: auto;
+    padding: 16px;
+
+}
+
+#Buying_Right_Now>.Buying_Right_Now_section:last-child {
+    margin-top: 18px;
+}
+
+.Buying_Right_Now_section>img {
+    width: 100%;
+}
+
+.Buying_Right_Now_section>p {
+    color: #2E3337;
+    text-align: center;
+    margin: 8px 0px;
+    width: 310px;
+}
+
+.Buying_Right_Now_btn {
+    width: 310px;
+    height: 42.2px;
+    display: block;
+    margin: auto;
+    padding: 12px;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+    box-sizing: border-box;
+    border-style: solid;
+    background-color: #333333;
+    text-decoration: none;
+}
+
+.Buying_Right_Now_btn:hover {
+    cursor: pointer;
+    background-color: #6cbdb7;
+}
+
+
+#partner_logos {
+    width: 1400px;
+    height: 196px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 1, auto;
+    gap: 20px;
+    margin: auto;
+    padding: 16px;
+
+}
+
+.partner_logo img {
+    width: 196px;
+}
+
+.partner_logo:nth-child(5) {
+    margin-top: -50px;
+
+}
+
+.swiper {
+width: 1400px;
+height: 455px;
+}
+
+
+
+.swiper>h1 {
+font-size: 30px;
+}
+
+
+
+.swiper-slide img {
+display: block;
+width: 196px;
+object-fit: cover;
+}
+
+#trending_Now_sec1{
+text-align: center;
+
+}
+
+#trending_Now_txt{
+margin-top: -30px;
+}
