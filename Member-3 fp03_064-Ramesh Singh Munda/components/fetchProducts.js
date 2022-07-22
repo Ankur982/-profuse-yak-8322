@@ -1,8 +1,6 @@
 // getData
 let getData = async (url)=> {
 
-
-
     let res = await fetch(url);
     // console.log("res:", res);
 
@@ -19,21 +17,6 @@ let appendData = (data, container)=> {
     // console.log('data:', data);
 
     container.innerHTML = null;
-
-   
-    
-    // sortLTH
-    // data.sort((a, b)=> {
-    //     return a.price - b.price;
-    // });
-
-
-    // sorting
-    
-    // sortHTL
-    // data.sort((a, b)=> {
-    //     return b.price - a.price;
-    // });
 
     data.forEach((el)=> {
         // product
@@ -96,7 +79,7 @@ let appendData = (data, container)=> {
 
 // // clickProduct
 let clickProduct = (el)=> {
-    // console.log(el.id);
+    console.log(el.id);
 
     let product_id = JSON.parse(localStorage.getItem("product_id")) || [];
     product_id.push(el.id);
