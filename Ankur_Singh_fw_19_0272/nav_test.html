@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="navbar.css">
+
+    <style>
+        #header{
+            border: 1px solid ;
+        }
+
+        #header>ul{
+            background-color: #fff;
+        }
+
+        #header ul{
+            list-style: none;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            float: left;
+        }
+
+        #header ul a{
+            color: #000;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 200px;
+            display: block;
+        }
+        #fixed_navbar{
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navbar">
+        <div id="fixed_navbar">
+            <div id="header">
+                <ul>
+                    <li><a href="home_page.html">
+                            <div id="logo">
+                                <h1 id="logo_main">SkinStore</h1>
+                                <p id="logo_main_dis">part of the <b>Lookfantastic</b> group</p>
+                            </div>
+                        </a>
+                    
+                        <div id="header_search">
+                            <input id="header_search_input" type="text" placeholder="Search for a product or brand">
+                            <i class='fa-solid fa-magnifying-glass'></i>
+
+                        </div>
+                    
+                        <a href="">
+                        <div id="box_account_cart">
+                            <div id="account">
+                                <p id="user_account"><i class="fa-solid fa-user"></i> Account</p>
+                            </div>
+                        </a>
+
+
+                        <a href="">
+                        
+                            <div id="cart">
+                                <p><i class="fa-solid fa-cart-shopping"></i> Cart</p>
+                            </div>
+                        </div>
+                    </a>
+                        <ul>
+                            <li>
+                                <a href="">user_name</a>
+                            </li>
+                            <li>
+                                <a href="">My Account</a>
+                            </li>
+                            <li>
+                                <a href="">Wishlist</a>
+                            </li>
+                            <li>
+                                <a href="">My Order</a>
+                            </li>
+                            <li>
+                                <a href="">Your Referrals</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="/">
+                            <i class="fa-solid fa-cart-shopping"></i> Cart
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
