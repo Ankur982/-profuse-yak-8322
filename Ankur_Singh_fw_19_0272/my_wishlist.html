@@ -1,178 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Orders</title>
+    <title>Wishlist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
     <style>
-         * {
-            font-family: Arial, Helvetica, sans-serif;
+        #my_wishlist {
+            width: 1300px;
+            margin: auto;
+            margin-top: 90px;
+
+
         }
 
-        #my_account_order_cont{
-            width: 1400px;
+        #my_wishlist h1 {
+            font-weight: 200;
+        }
+
+        .wishlist_img {
+            display: block;
             margin: auto;
+            width: 80px;
+            margin-top: 80px;
         }
-        .my_account_order_txt{
-            margin-top: 50px;
-            color: #2E3337;
+
+        .txt_center {
+            text-align: center;
+            font-weight: 200;
+        }
+
+        #my_wishlist h3 {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        #my_wishlist p {
+            text-align: center;
             font-size: 14px;
-            font-weight: 100;
         }
-        a{
+
+        .my_wishlist_btn {
+            width: 180px;
+            height: 42.2px;
+            display: block;
+            margin: auto;
+            margin-top: 50px;
+            padding: 12px;
+            font-size: 14px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            text-align: center;
+            box-sizing: border-box;
+            border-style: solid;
+            background-color: #333333;
             text-decoration: none;
-            color: #2E3337;
         }
-        .hr_line {
+
+        .my_wishlist_btn:hover {
+            cursor: pointer;
+            background-color: #6cbdb7;
+            cursor: pointer;
+
+        }
+
+        .hr_line{
             width: 1400px;
+            margin-top: 70px;
+        }
+        #my_wishlist_imges{
+            width: 1300px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,auto);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .my_wishlist_img{
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding: 10px;
+        }
+
+        .my_wishlist_img img{
+            width: 100%;
             
         }
 
-        #my_account {
-            width: 1400px;
-            height: 119px;
-            display: flex;
-            justify-content: space-between;
-            margin: auto;
-            margin-top:-20px;
-            padding: 16px 32px;
-            margin-bottom: -50px;
-        }
-
-        #my_acc_detail {
-            width: 668px;
-            height: 87px;
-
-            color: #2E3337;
-            margin-left: 20px;
-        }
-
-        .my_acc_btn2 {
-            width: 87px;
-            height: 44px;
-            margin-top: 20px;
-            background-color: #FFFFFF;
-            font-size: 14px;
-            margin-right: 20px;
-            color: #333333;
-            text-transform: uppercase;
-            text-align: center;
-            box-sizing: border-box;
-            border-style: solid;
-            background-color:#FFFFFF ;
-            text-decoration: none;
-        }
-        .my_acc_btn1{
-            width: 140px;
-            height: 44px;
-            margin-top: 20px;
-            background-color: #FFFFFF;
-            font-size: 14px;
-            margin-right: 20px;
-            color: #333333;
-            text-transform: uppercase;
-            text-align: center;
-            box-sizing: border-box;
-            border-style: solid;
-            background-color:#FFFFFF ;
-            text-decoration: none;
-        }
-
-        .my_acc_btn1:hover ,.my_acc_btn2:hover {
-            cursor: pointer;
-            background-color: #6cbdb7;
-        }
-
-
-        .int_txt {
-            text-align: center;
-            font-size: 14px;
-            font-weight: 200;
-        }
-
-        .your_section {
-            width: 1400px;
-            color: #2E3337;
-            padding: 16px 16px 14px;
-            margin: auto;
-        }
-        .section_txt {
-            text-align: center;
-            font-weight: 200;
-            font-size: 36px;
-        }
-
         #footer{
-            margin-top: 600px;
+            margin-top: 680px;
         }
-
 
     </style>
 </head>
+
 <body>
 
     <div id="navbar">
     </div>
-<div id="my_account_order_cont">
-    <p class="my_account_order_txt"><a href="/">My Account</a> / Order Information</p>
-</div>
+
+
+    <div id="my_wishlist">
+        <h1>My Wishlist</h1>
+        <hr>
+        <div>
+            <img class="wishlist_img"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf_D5oEjScHGofIp1r475g2cJ9sS0LtMkyfewdpQ0qcZdWtZKc"
+                alt="error">
+            <h3>Your Wishlist is empty</h3>
+            <p>Add some items to your wishlist to save them for later.</p>
+        </div>
+
+        <button class="my_wishlist_btn">CONTINUE SHOPPING</button>
+
+    </div>
+
 <hr class="hr_line">
+    <div id="my_wishlist_imges">
+
+        <div class="my_wishlist_img">
+            <img src="https://s1.thcdn.com/widgets/121-us/53/Skincare-041053.jpg" alt="error">
+            <h3>Skin Care</h3>
+        </div>
+        <div class="my_wishlist_img">
+            <img src="https://s1.thcdn.com/widgets/121-us/30/580x580-125830.jpg" alt="error">
+            <h3>Hair Care</h3>
+        </div>
+        <div class="my_wishlist_img">
+            <img src="https://s1.thcdn.com/widgets/121-us/17/original-NF_PROD_SpringPromo22-Mini_Hero_01-102717.jpg" alt="error">
+            <h3>Tools</h3>
+        </div>
+        <div class="my_wishlist_img">
+            <img src="https://s1.thcdn.com/widgets/121-us/16/Makeup-041316.jpg" alt="error">
+            <h3>Makeup</h3>
+        </div>
+        <div class="my_wishlist_img">
+            <img src="https://s1.thcdn.com/widgets/121-us/32/Body-041332.jpg" alt="error">
+            <h3>Bath & Body</h3>
+        </div>
+        <div class="my_wishlist_img">
+            <img src="https://s1.thcdn.com/widgets/121-us/49/Wellness-041349.png" alt="error">
+            <h3>Wellness</h3>
+        </div>
+
+
+
+    </div>
+
+
     
+     <!-- footer part of page -->
 
-<div id="my_account">
-    <div id="my_acc_detail">
-        <h1>Order Information</h1>
-    </div>
-    <div>
-        <button class="my_acc_btn1">ACCOUNT HOME</button>
-        <button class="my_acc_btn2">LOG OUT</button>
+     <div id="footer">
+
+
     </div>
 
-</div>
-
-<hr class="hr_line">
-
-<div class="your_section">
-    <h1 class="section_txt">Active Orders</h1>
-    <div id="your_order_section">
-        <p class="int_txt">You currently have no outstanding orders.</p>
-    </div>
-</div>
 
 
-
-<hr class="hr_line">
-
-<div class="your_section">
-    <h1 class="section_txt">Completed Orders</h1>
-    <div id="your_subs_section">
-        <p class="int_txt">You currently have no completed orders.</p>
-    </div>
-</div>
-
-<hr class="hr_line">
-
-
- <!-- footer part of page -->
-
- <div id="footer">
-
-
-</div>
-    
 </body>
+
 </html>
+
 <script type="module">
 
     import navbar from "./components/navbar.js";
 
-    document.getElementById("navbar").innerHTML=navbar();
+    document.getElementById("navbarr").innerHTML=navbar();
 
-    
+
     document.querySelector("#logo").addEventListener("click",myhome)
     function myhome(){
         window.location.href="./home_page.html"
@@ -244,8 +245,16 @@
 }
 
 
+</script>
+
+
+<script>
+    function login(){
+        window.location.href="./login.html"
+    }
 
 </script>
+
 <script type="module">
 
     import footer from "./components/footer.js";
