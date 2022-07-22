@@ -7,11 +7,9 @@ let url = `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${
 // container
 let container = document.getElementById("product-section");
 
-// getData
-let getData = async (url)=> {
-
-    
-
+// Brand
+let getBrand = async (url)=> {
+    let type = "Brand";
     let res = await fetch(url);
     // console.log("res:", res);
 
@@ -27,21 +25,20 @@ let getData = async (url)=> {
 
     data = [...new Set(arr)];
 
-    appendData(data);
+    appendData(data, type);
     // return data;
 }
-getData(url);
-
+getBrand(url);
 
 // appendData
-let appendData = (data)=> {
+let appendData = (data, type)=> {
     console.log('data:', data);
 
     let container = document.getElementById("filter");
     container.innerHTML = null;
 
     let filter = document.createElement("h5");
-    filter.innerText = "Brand";
+    filter.innerText = `${type}`;
 
     let box = document.createElement("div");
     box.setAttribute("id", "filter-box");
@@ -62,14 +59,10 @@ let appendData = (data)=> {
             console.log("select");
         });
 
-        
-
         // label.append(input);
 
         div.append(input, label);
         box.append(div);
         container.append(box);
     }); 
-
-    
 }
