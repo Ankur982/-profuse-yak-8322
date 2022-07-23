@@ -25,19 +25,24 @@
 }
 
 #content {
+    /* border: 1px solid black; */
+
     padding: 10px;
 }
 
-button {
+/* button {
     border: none;
     cursor: pointer;
     margin-bottom: 10px;
-}
+} */
 #cart-btn {
-    width: 100%;
+    width: 150px;
     background-color: black;
     color: white;
     padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
 #cart-btn:hover {
@@ -48,9 +53,20 @@ button {
 #wishlist-btn {
     color: black;
     padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: rgb(230, 230, 230);
+
+}
+button {
+    margin-right: 10px;
 }
 #wishlist-btn:hover {
-    background-color: rgb(230, 230, 230);
+    /* background-color: black; */
+    background-color: grey;
+    color: white;
+
 }
 
 #description {
