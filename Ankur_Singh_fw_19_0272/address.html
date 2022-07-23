@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Page</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            background-color: #f2f2f2;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #login_page_box {
+            display: flex;
+
+        }
+
+        #reg_page_navbar {
+            width: 100%;
+            height: 71px;
+            background-color: #FFFFFF;
+            padding-top: 8px;
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 1200;
+
+        }
+
+
+        #reg_page_navbar>img {
+            width: 213px;
+            height: 60px;
+            padding-left: 70px;
+            background-color: #FFFFFF;
+        }
+
+
+        #paygateway {
+            margin: 40px 0;
+            
+        }
+
+
+        #paybox {
+            margin: auto;
+            width: 600px;
+            border: 1px solid transparent;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            margin-top: 40px;
+            border-radius: 30px;
+            
+        }
+
+        #paydetail>label {
+            font-size: 20px;
+            color: #4B5563;
+            background-color: #FFFFFF;
+        }
+
+        #paydetail {
+            margin: auto;
+            padding: 10px 30px 30px 30px;
+            background-color: #FFFFFF;
+
+
+
+        }
+
+        .cartdetail {
+            box-sizing: border-box;
+            margin-top: 10px;
+            resize: vertical;
+            width: 100%;
+            height: 50px;
+            font-size: large;
+            border: 1px solid #ccc;
+            border-radius: 9px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            outline: none;
+            padding-left: 20px;
+            background-color: #FFFFFF;
+
+        }
+
+        #cartsubmit {
+            width: 100%;
+            height: 50px;
+            border-radius: 9px;
+            display: block;
+            margin: auto;
+            margin-top: 30px;
+            padding: 12px;
+            font-size: 14px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            text-align: center;
+            box-sizing: border-box;
+            border-style: solid;
+            background-color: #333333;
+            text-decoration: none;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        }
+
+        #cartsubmit:hover {
+            cursor: pointer;
+            background-color: #6cbdb7;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+
+        #paydetail>div {
+
+            font-size: 14px;
+            font-weight: 450;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #CFA180;
+
+        }
+
+        #paytitle {
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- navBar section -->
+
+    <div id="reg_page_navbar" onclick="myhome=window.location.href='./home_page.html'">
+        <img src="https://s1.thcdn.com/enterprise/assets/skstr-global-113e023e-ecc9-45df-abad-eb92ce1956c9-logo-default.svg"
+            alt="">
+    </div>
+
+    <!-- navBar section end -->
+
+
+
+    
+    <section id="paygateway">
+        <h1 id="paytitle">Add Delivery Address.</h1>
+
+        <div id="paybox">
+            <form id="paydetail" action="">
+                
+                <label for="">*Full name</label>
+                <input class="cartdetail" type="text" id="name" required="true"><br><br>
+                
+                <label for="">*Phone Number</label>
+                <input class="cartdetail" type="number" id="number" required="true"><br><br>
+
+                <label for="">*Zip Code/Postcode</label>
+                <input class="cartdetail" type="number" id="pin" required="true"><br><br>
+
+                <label for="">*House No., Building Name</label>
+                <input class="cartdetail" type="text" id="house_no" required="true"><br><br>
+               
+                <label for="">*Town/City</label>
+                <input class="cartdetail" type="text" id="City" required="true"><br><br>
+
+                <label for="">*State</label>
+                <input class="cartdetail" type="text" id="state" required="true"><br><br>
+
+                <input type="submit" name="" id="cartsubmit">
+            </form>
+        </div>
+    </section>
+
+  
+
+</body>
+
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit", myPayment);
+    let pay = JSON.parse(localStorage.getItem("delivery_details")) || []
+
+    function myPayment() {
+        event.preventDefault();
+        console.log("here")
+
+        let obj = {
+            name: document.querySelector("#name").value,
+            number: document.querySelector("#number").value,
+            pin:document.querySelector("#pin").value,
+            house_no: document.querySelector("#house_no").value,
+            City: document.querySelector("#City").value,
+            state: document.querySelector("#state").value,
+        }
+        if (obj.name!=""&&obj.number!=""&&obj.pin!=""&&obj.house_no!=""&&obj.City!=""&&obj.state!=""&&) {
+            localStorage.setItem("delivery_details", JSON.stringify(pay))
+            alert("Your Details Saved Successfully")
+            window.location.href = "payment.html"
+
+        } else {
+            alert("Invalid details....")
+        }
+    }
+
+
+</script>

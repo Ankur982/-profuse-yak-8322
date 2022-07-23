@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otp Page</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+       * {
+            padding: 0;
+            margin: 0;
+            background-color: #f2f2f2;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #login_page_box {
+            display: flex;
+
+        }
+
+        #reg_page_navbar {
+            width: 100%;
+            height: 71px;
+            background-color: #FFFFFF;
+            padding-top: 8px;
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 1200;
+
+        }
+
+
+        #reg_page_navbar>img {
+            width: 213px;
+            height: 60px;
+            padding-left: 70px;
+            background-color: #FFFFFF;
+        }
+
+
+
+        #otp_box {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            width: 50%;
+            margin: auto;
+            margin-bottom: 60px;
+
+        }
+
+        #optform {
+            font-size: larger;
+            padding: 50px;
+
+        }
+
+        #optform>label {
+            font-size: 40px;
+            color: #4B5563;
+        }
+
+        #otpsubmit {
+            width: 310px;
+            height: 50px;
+            display: block;
+            margin: auto;
+            padding: 12px;
+            font-size: 14px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            text-align: center;
+            box-sizing: border-box;
+            border-style: solid;
+            background-color: #333333;
+            text-decoration: none;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+        }
+        
+
+        #otpinput {
+            box-sizing: border-box;
+            margin-top: 10px;
+            resize: vertical;
+            width: 100%;
+            height: 60px;
+            font-size: large;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+
+
+        }
+
+        #otpsubmit:hover {
+            cursor: pointer;
+            background-color: #6cbdb7;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+
+        #payimage {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 150px;
+            padding: 0 20px;
+        }
+
+        #payimage+p {
+            width: 40%;
+            margin: auto;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- navBar section -->
+
+    <div id="reg_page_navbar" onclick="myhome=window.location.href='./home_page.html'">
+        <img src="https://s1.thcdn.com/enterprise/assets/skstr-global-113e023e-ecc9-45df-abad-eb92ce1956c9-logo-default.svg"
+            alt="">
+    </div>
+
+    <!-- navBar section end -->
+
+
+
+
+    <div id="payimage">
+        <img src="https://paysecure.udio.in/resources/img/dhanipay_logo.png" alt="error">
+        <img src="https://paysecure.udio.in/resources/img/rupay_logo.png" alt="error">
+    </div>
+    <p>Please enter the One Time Password(OTP) sent to your registered mobile number/email id to successfully complete
+        the
+        transaction</p>
+
+    <div id="otp_box">
+        <form action="" id="optform">
+            <label for="">Please enter OTP</label> <br> <br>
+            <input type="text" name="" id="otpinput"> <br> <br>
+            <input type="submit" name="" id="otpsubmit">
+        </form>
+    </div>
+
+
+
+
+
+</body>
+
+
+</html>
+
+<script>
+    document.querySelector("#optform").addEventListener("submit", myfun);
+
+    function myfun() {
+        event.preventDefault();
+        let otp = document.querySelector("#otpinput").value;
+        let obj = {
+            otp: otp,
+        }
+        if (obj.otp == "1234"||"8504"||"8998"||"9838") {
+            alert("Payment Successful.....Your Order Will Deliver with in 7 Day");
+            window.location.href = "home_page.html";
+        } else {
+            alert("Please enter Valid otp...!😓");
+            window.location.reload();
+        }
+
+
+    }
+</script>
+
