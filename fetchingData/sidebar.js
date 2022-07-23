@@ -1,4 +1,4 @@
-function container(){
+function sidebarfiltter(){
     return `
 
 <div id="container11">
@@ -404,4 +404,4 @@ function container(){
 
 }
 
-export {container}
+export {sidebarfiltter}

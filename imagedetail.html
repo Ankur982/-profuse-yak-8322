@@ -1,0 +1,388 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    margin-left:250px;
+    margin-right:250px;
+    width: 1400px;
+    border: 4px rgb(231, 6, 6) solid;
+    height:700px;
+    font-family: "Lato-Light",Helvetica,Arial,sans-serif;
+    
+}
+#box3{
+    border: 2px solid black;
+    display: flex;
+     
+}
+#box1{
+    height: 600px;
+    width: 600px;
+    border: 2px solid black;
+
+}
+#box2{
+    height: 600px;
+    width:600px;
+   border:2px solid black;
+}
+img{
+    width: 700px;
+    height: 700px;
+    border: 2px solid rgb(0, 255, 8);
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="container12"></div>
+    
+</body>
+</html>
+<script>
+
+var data=JSON.parse(localStorage.getItem("show"))
+console.log(data)
+
+        let div2=document.createElement("div")
+        div2.setAttribute("id","box2")
+        let div3=document.createElement("div")
+        div3.setAttribute("id","box3")
+        let div1=document.createElement("div")
+        div1.setAttribute("id","box1")
+        let image=document.createElement("img")
+        image.src=data.image_link;
+        let title=document.createElement("h4")
+        title.innerText=data.title;
+        let category=document.createElement("h5")
+        category.innerText=data.category;
+        let price=document.createElement("p")
+        price.innerText=data.price;
+        let btn=document.createElement("button")
+        btn.innerText="Add to cart";
+        btn.addEventListener("click",function(){
+            addToCart(el)
+        })
+
+div1.append(image);
+div2.append(title,category,price,btn)
+div3.append(div1,div2)
+document.getElementById("container12").append(div3) 
+
+
+</script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        #container {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+#product {
+    /* width: 100%; */
+    /* border: 1px solid black; */
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    padding: 10px;
+    display: flex;
+}
+#image {
+    /* border: 1px solid black; */
+    width: 60%;
+}
+#image > img {
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 300px;
+}
+
+#content {
+    /* border: 1px solid black; */
+
+    padding: 10px;
+}
+
+/* button {
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+} */
+#cart-btn {
+    width: 150px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#cart-btn:hover {
+    background-color: rgb(55, 186, 186);
+    color: black;
+}
+
+#wishlist-btn {
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: rgb(230, 230, 230);
+
+}
+button {
+    margin-right: 10px;
+}
+#wishlist-btn:hover {
+    /* background-color: black; */
+    background-color: grey;
+    color: white;
+
+}
+
+#description {
+    /* border: 1px solid black; */
+    background-color: rgb(250, 249, 248);
+    padding: 10px;
+}
+    </style>
+    <!-- Style -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/product.css">
+    <link rel="stylesheet" href="./styles/desc.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+
+    <!-- navbar -->
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <!-- footer -->
+    <link rel="stylesheet" href="./styles/footer.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+<body>
+    <!-- navbar -->
+    <div id="navbar">
+
+    </div>
+
+    <!-- container -->
+    <div id="container">
+        <!-- <div id="image-section"></div>
+        <div id="content-section"></div> -->
+    </div>
+
+    <div id="video">
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ueDnkl8ZUkQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    </div>
+
+    
+    <div id="desciption-section">
+        
+        <div id="desc">
+            <h4>Description</h4>
+            <div>
+                <p><b>**Winner of SkinStore's 2019 Expert's Choice Award - Best Vitamin C**</b></p>
+
+<p>Experience advanced environmental protection with <b>SkinCeuticals C E Ferulic</b>; a potent Vitamin C serum that delivers visible anti-aging benefits. Free from parabens, the formula is gentle yet effective and is suitable for normal, dry and even sensitive skin types. The serum delivers an array of enviable benefits that last over 72 hours. Simply smooth 4-5 drops of the fast-absorbed solution over the face, neck and décolletage.</p>
+
+<p>Boasting an antioxidant blend of 15% Pure Vitamin C (L-Ascorbic Acid), 1% Vitamin E (Alpha Tocopherol) and 0.5% Ferulic Acid, the daytime serum envelops skin in a protective veil. This shields the visage from age-inducing free radicals, infrared radiation and ozone pollution, which can all contribute to visible signs of skin aging.</p>
+
+<p>Alongside essential antioxidant performance, the C E Ferulic serum reduces current signs of aging, while visibly brightening the visage. The serum is able to reduce the appearance of fine lines, wrinkles and photodamage, alongside combating loss of elasticity to leave skin firm and youthful. Expect exceptional protection.</p>
+
+<p>Now clinically proven to reduce combined oxidative damage from free radicals generated by UV, Ozone, and Diesel Exhaust by up to 41%. U.S. Patent No. 7,179,841</p>
+
+<p>Paraben-free.</p>
+            </div>
+        </div>
+        
+        <div id="product-details">
+            <h4>Product Details</h4>
+            <div id="details">
+                <div id="row">
+                    <div id="col"><h5>Range:</h5></div>
+                    <div id="col">Prevent</div>
+                </div>
+                <div id="row">
+                    <div id="col"><h5>Ingredients:</h5></div>
+                    <div id="col"><p>Water, Ethoxydiglycol, L-Ascorbic Acid, Propylene Glycol, Glycerin, Laureth-23, Alpha Tocopherol, Phenoxyethanol, Triethanolamine, Ferulic Acid, Panthenol, Sodium Hyaluronate.</p>
+
+                        <h5>Key Ingredients:</h5>
+
+                        <ul>
+                            <li>15% L-ascorbic acid - highly potent form of pure vitamin C helps neutralize free radicals and protect against oxidative stress while providing visible anti-aging benefits</li>
+                            <li>1% alpha tocopherol - This pure form of vitamin E neutralizes free radicals and replenishes skin lipids. It has been proven to act synergistically with vitamin C.</li>
+                            <li>0.5% ferulic acid - A plant-based antioxidant, ferulic acid neutralizes free radicals and enhances the antioxidant benefits and stability of vitamins C and E.</li>
+                        </ul>
+                        
+                        
+                        
+                        </div>
+                </div>
+                <div id="row">
+                    <div id="col"><h5>Brand:<h5></h5></h5></div>
+                    <div id="col"><p>SkinCeuticals</p></div>
+                </div>
+                <div id="row">
+                    <div id="col"><h5>Volume:</h5></div>
+                    <div id="col"><p>1 fl.oz</p></div>
+                </div>
+                <div id="row">
+                    <div id="col"><h5>Directions:</h5></div>
+                    <div id="col"><p>In the morning after cleansing and toning, apply 4-5 drops to a dry face, neck, and chest before other anti-aging skincare products.  Complete your regimen with a SkinCeuticals sunscreen. When used together, SkinCeuticals antioxidants and broad spectrum sunscreens provide protection against visible aging caused by environmental aggressors.</p></div>
+                </div>
+
+                <div id="row">
+                    <div id="col"><h5>Key Benefits:</h5></div>
+                    <div id="col">
+                        <ul>
+                            <li>Ideal for dry, normal and sensitive skin types</li>
+                            <li>Provides advanced environmental protection by neutralizing damaging free radicals</li>
+                            <li>Neutralizes free radicals on the upper layer of the skin to help prevent the impact of ozone damage to skin</li>
+                            <li>Visible anti-aging benefits, such as the improvement of the appearance of lines and wrinkles, loss of firmness, and brightens skin's complexion</li>
+                            <li>Once absorbed, this vitamin C serum remains effective for a minimum of 72 hours</li>
+                            <li>Paraben Free</li>
+                        </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer">
+
+    </div>
+</body>
+</html>
+<!-- Script -->
+<script src="./scripts/product.js" type="module"></script>
+
+<!--  -->
+<script type="module">
+    import navbar from "./components/navbar.js";
+     console.log(navbar());
+    document.getElementById("navbar").innerHTML= navbar();
+    
+    document.querySelector("#logo").addEventListener("click",myhome)
+    function myhome(){
+        window.location.href="./home_page.html"
+    }
+    document.querySelector("#cart").addEventListener("click",mycart)
+    function mycart(){
+        window.location.href="./cart.html"
+    }
+    let Dash = document.querySelector("#current_user");
+    Dash.addEventListener("change", dash_Function);
+    function dash_Function(){
+         if(Dash.value == "Login"){
+            window.location.href="login.html"
+        }else if(Dash.value == "Register"){
+            window.location.href="./registration.html"
+        }
+        else if(Dash.value == "Wishlist"){
+            window.location.href="./my_wishlist.html"
+        }else if(Dash.value == "Your Order"){
+            window.location.href="./my_order.html"
+        }
+        else if(Dash.value == "Your Referrals"){
+            window.location.href="./my_referrals.html"
+        }
+    }
+    let user = JSON.parse(localStorage.getItem("loginData"));
+    let loged_user = user[user.length - 1].name
+    if (user.length > 0) {
+    //logout
+    if (user !== null) {
+        document.querySelector("#user_account").innerHTML =
+            `<select name="current_user" id="current_user">
+   <option id="useless" class="dash_options" value="">${loged_user}</option>
+   <option id="useless" class="dash_options" value="My Account">My Account</option>
+   <option id="useless" class="dash_options" value="Wishlist">Wishlist</option>
+   <option id="useless" class="dash_options" value="Your Order">Your Order</option>
+   <option id="useless" class="dash_options" value="Your Referrals">Your Referrals</option>
+   <option class="dash_options" value="Sign Out">Sign Out</option>
+ </select>`
+    }
+    let Dash = document.querySelector("#current_user");
+    Dash.addEventListener("change", dashFunction);
+    function dashFunction() {
+        if (Dash.value == "Sign Out") {
+            localStorage.removeItem("loginData");
+            window.location.reload();
+        }
+        else if(Dash.value == "My Account"){
+            window.location.href="my_account.html"
+        }else if(Dash.value == "Wishlist"){
+            window.location.href="my_wishlist.html"
+        }else if(Dash.value == "Your Order"){
+            window.location.href="my_order.html"
+        }
+        else if(Dash.value == "Your Referrals"){
+            window.location.href="my_referrals.html"
+        }
+    }
+}
+</script>
+
+<!-- login -->
+<script>
+    function login(){
+        window.location.href="./login.html"
+    }
+</script>
+
+<!-- footer -->
+<script type="module">
+    import footer from "./components/footer.js";
+    document.getElementById("footer").innerHTML=footer();
+
+
+
+
+
+
+
+    // import getData, appendData
+import {getData, appendData} from "../components/fetchProduct.js";
+
+// let id = "740";
+let data = JSON.parse(localStorage.getItem("product_id")) || [];
+let product_id = data[data.length - 1];
+
+// url
+let url = `https://makeup-api.herokuapp.com/api/v1/products/${product_id}.json`;
+
+// container
+let container = document.getElementById("container");
+
+getData(url).then((res)=> {
+    // console.log("res:", res);
+    appendData(res, container);
+});
+</script>

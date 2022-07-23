@@ -6,19 +6,22 @@ function append(data){
         div1.setAttribute("class","div")
         let image=document.createElement("img")
         image.src=el.image_link
+        image.setAttribute("id","image")
         image.addEventListener("click",function(){
             showProduct(el)
         })
 
         function showProduct(el){
-            localStorage.setItem('show',JSON.stringify(el))
+            localStorage.setItem('product_id',JSON.stringify(el))
         }
-        let title=document.createElement("h4")
-        title.innerText=el.title;
+        let x=document.createElement("h4")
+      x.innerText=el.name;
+        let producttype=document.createElement("h6")
+        producttype.innerText=el.brand;
         let category=document.createElement("h5")
         category.innerText=el.category;
         let price=document.createElement("p")
-        price.innerText=el.price;
+        price.innerText="$"+el.price;
         
         let btn=document.createElement("button")
         btn.innerText="Add to cart";
@@ -26,7 +29,7 @@ function append(data){
             addToCart(el)
         })
 
-div1.append(image,title,category,price);
+div1.append(image,x,producttype,category,price);
 div2.append(btn)
 div3.append(div1,div2)
 document.getElementById("container12").append(div3)
