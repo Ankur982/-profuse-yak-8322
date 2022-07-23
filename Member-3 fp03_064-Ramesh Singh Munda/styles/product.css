@@ -40,6 +40,11 @@ button {
     padding: 10px;
 }
 
+#cart-btn:hover {
+    background-color: rgb(55, 186, 186);
+    color: black;
+}
+
 #wishlist-btn {
     color: black;
     padding: 10px;
