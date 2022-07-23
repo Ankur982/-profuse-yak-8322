@@ -49,6 +49,7 @@ let appendData = (data, container)=> {
             addToCart(data);
         });
 
+        
         // wishlist
         let wishlist = document.createElement("button");
         wishlist.setAttribute("id", "wishlist-btn");
