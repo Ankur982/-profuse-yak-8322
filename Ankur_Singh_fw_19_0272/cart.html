@@ -24,28 +24,33 @@
 
   #promo_code {
     /* padding-left: 10px; */
-    height: 30px;
-    width: 200px;
-    border-radius: 10px;
+    height:40px;
+    width: 300px;
+    padding-left: 20px;
     border: transparent;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
     outline: none;
   }
 
   #promo_submit {
-    font-weight: 600;
-    padding: 0 30px;
-    height: 30px;
-    border: none;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
-    margin-left: 30px;
+    width: 150px;
+    height: 42.2px;
+    display: block;
+    margin: auto;
+    padding: 12px;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+    box-sizing: border-box;
+    border-style: solid;
+    background-color: #333333;
+    text-decoration: none;
   }
 
   #promo_submit:hover {
-    background-color: teal;
-    /* font-weight: 600; */
+    background-color: #6cbdb7;
+
     cursor: pointer;
   }
 
@@ -83,6 +88,7 @@
     text-align: center;
     width: 60%;
     padding: 20px;
+    font-weight: 200;
   }
 
   .cart_item {
@@ -113,29 +119,47 @@
 
 
   #checkout_button {
-    padding: 10px 40px;
-    border-radius: 8px;
-    margin-bottom: 60px;
+    width: 250px;
+    height: 42.2px;
+    display: block;
+    margin: auto;
+    padding: 12px;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+    box-sizing: border-box;
+    border-style: solid;
+    background-color: #333333;
+    text-decoration: none;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
 
   #checkout_button:hover {
     cursor: pointer;
+    background-color: #6cbdb7;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   }
 
   .remove_button {
-    background-color: red;
-    font-weight: 600;
-    color: white;
-    border: transparent;
-    border-radius: 20px;
-    width: 80%;
-    padding: 5px 10px;
+    width: 150px;
+    height: 42.2px;
+    display: block;
+    margin: auto;
+    padding: 12px;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+    box-sizing: border-box;
+    border-style: solid;
+    background-color: #333333;
+    text-decoration: none;
   }
 
   .remove_button:hover {
+    background-color: red;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     cursor: pointer;
   }
@@ -153,7 +177,7 @@
 </style>
 
 <body>
-  <div id="navbarr">
+  <div id="navbar">
   </div>
 
 
@@ -198,7 +222,7 @@
 
   import navbar from "./components/navbar.js";
 
-  document.getElementById("navbarr").innerHTML=navbar();
+  document.getElementById("navbar").innerHTML=navbar();
 
 
   document.querySelector("#logo").addEventListener("click",myhome)
@@ -210,6 +234,8 @@
   function mycart(){
       window.location.href="./cart.html"
   }
+
+
 
 
   let Dash = document.querySelector("#current_user");
@@ -269,19 +295,27 @@
           window.location.href="my_referrals.html"
       }
   }
+
+  // show user name on page
+
+  
+  document.querySelector("#curr_user_name").innerText=`Welcome ${loged_user}`
+
+
+  //logout func of page
+
+  document.querySelector("#my_acc_logout_btn").addEventListener("click",my_acc_logout_func)
+
+function my_acc_logout_func(){
+  localStorage.removeItem("loginData");
+      window.location.reload();
+}
 }
 
 
-</script>
 
-
-<script>
-  function login(){
-      window.location.href="./login.html"
-  }
 
 </script>
-
 <script type="module">
 
   import footer from "./components/footer.js";
@@ -291,7 +325,6 @@
   
 
 </script>
-
 
 
 
@@ -362,7 +395,7 @@
       alert("Promo Code Already Used !!");
       return;
     } else {
-      if (coupons == "skin30") {
+      if (coupons == "skin30"||"skinstore30"||"masai30"||"skinstore"||"profuse") {
         discCount += 1;
         let per = totalPrice * 30 / 100;
         disc = totalPrice - per;
@@ -378,7 +411,7 @@
   document.querySelector("#checkout_button").addEventListener("click", redirectPayment);
 
   function redirectPayment() {
-    window.location.href = "#"
+    window.location.href = "./address.html"
   }
 
 
