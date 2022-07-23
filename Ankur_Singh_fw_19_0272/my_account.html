@@ -205,10 +205,10 @@
     <div id="my_account">
         <div id="my_acc_detail">
             <h1>My Account</h1>
-            <p>Welcome Ankur</p>
+            <p id="curr_user_name">Welcome User</p>
         </div>
         <div>
-            <button class="my_acc_btn">LOG OUT</button>
+            <button class="my_acc_btn" id="my_acc_logout_btn">LOG OUT</button>
         </div>
 
     </div>
@@ -439,6 +439,21 @@
             window.location.href="my_referrals.html"
         }
     }
+
+    // show user name on page
+
+    
+    document.querySelector("#curr_user_name").innerText=`Welcome ${loged_user}`
+
+
+    //logout func of page
+
+    document.querySelector("#my_acc_logout_btn").addEventListener("click",my_acc_logout_func)
+
+function my_acc_logout_func(){
+    localStorage.removeItem("loginData");
+        window.location.reload();
+}
 }
 
 
