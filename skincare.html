@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="cssforall.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
     <title>Skincare</title>
     <style>
         .banner42 img{
@@ -16,6 +19,8 @@
     </style>
 </head>
 <body>
+    <div id="navbarr">
+    </div>
 
    
     <div id="banner">
@@ -31,41 +36,41 @@
                 <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/50/original-1224-STDCRE-28425-WC-SS-SkinStore-January-Photography-2022-BATCHING_Shot17-500x500-023950.jpg">
                 <h4>SkinCeuticals Gift</h4>
                 <p>Receive a SkinCeuticals Retexturing Activator 4ml (worth $21) when you spend $150 or more on the brand.</p>
-                <button>SHOP NOW</button>
+                <button onclick="location.href='products.html'">SHOP NOW</button>
            </div>
            <div class="banner21">
             <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/35/original-original-original-0429-STDCRE-13871-SS-CT-Summer-Commercial-Campaign-Photography-Batching-Priority-3-Shot_11.psd500x500-093656-100318-094035.jpg">
             <h4>10% off SkinMedical+Gift</h4>
             <p>Receive a free SkinMedica Instant Bright Eye Cream .07oz (worth $14) when you spend $130+ on the brand.</p>
-            <button>SHOP NOW</button>
+            <button onclick="location.href='products.html'">SHOP NOW</button>
        </div>
 
        <div class="banner21">
         <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/04/LF-EF-US-Comps-REN-380x312-091204.jpg" style="border-radius:1000px ;">
         <h4>25% off sun care</h4>
         <p>Save 25% off on your new beach skincare routine and stock up on all sun care in this list!</p>
-        <button>SHOP NOW</button>
+        <button onclick="location.href='products.html'">SHOP NOW</button>
    </div>
 
    <div class="banner21">
     <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/23/0611-HTA229-SS-LGM-380x312-CIRCLE-094123.jpg">
     <h4>EltaMD</h4>
     <p>EltaMD sun and skin care products are formulated for every skin type, lifestyle and special need.</p>
-    <button>SHOP NOW</button>
+    <button onclick="location.href='products.html'">SHOP NOW</button>
 </div>
 
 <div class="banner21">
     <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/38/SH08_Super_C_Multiple_090_MAIN-073138.jpg"  style="border-radius:1000px;" >
     <h4>StriVectin</h4>
     <p>With Strivectin you can have confidence that their skincare products will provide results thanks to their clinically proven.</p>
-    <button>SHOP NOW</button>
+    <button onclick="location.href='products.html'">SHOP NOW</button>
 </div>
 
 <div class="banner21">
     <img src="https://static.thcdn.com/images/small/webp/widgets/121-us/43/original-0712-STDCRE-38046-SS-MH-Photography-July-22-REMAINING-BATCHING-Shot11-500x500-052543.png">
     <h4>$75 Elemis Gift</h4>
     <p>Receive an Elemis RIXO Gift Set (Worth $75) when you spend $100 or more on the brand.</p>
-    <button>SHOP NOW</button>
+    <button onclick="location.href='products.html'">SHOP NOW</button>
 </div>
 
 
@@ -196,11 +201,83 @@
 
 
 
-
-
-
-
-
+       
 </div>
+
+ <div id="footer">
+        </div>
+
 </body>
 </html>
+<script type="module">
+    import navbar from "./components/navbar.js";
+    document.getElementById("navbarr").innerHTML=navbar();
+    document.querySelector("#logo").addEventListener("click",myhome)
+    function myhome(){
+        window.location.href="./home_page.html"
+    }
+    document.querySelector("#cart").addEventListener("click",mycart)
+    function mycart(){
+        window.location.href="./cart.html"
+    }
+    let Dash = document.querySelector("#current_user");
+    Dash.addEventListener("change", dash_Function);
+    function dash_Function(){
+         if(Dash.value == "Login"){
+            window.location.href="login.html"
+        }else if(Dash.value == "Register"){
+            window.location.href="./registration.html"
+        }
+        else if(Dash.value == "Wishlist"){
+            window.location.href="./my_wishlist.html"
+        }else if(Dash.value == "Your Order"){
+            window.location.href="./my_order.html"
+        }
+        else if(Dash.value == "Your Referrals"){
+            window.location.href="./my_referrals.html"
+        }
+    }
+    let user = JSON.parse(localStorage.getItem("loginData"));
+    let loged_user = user[user.length - 1].name
+    if (user.length > 0) {
+    //logout
+    if (user !== null) {
+        document.querySelector("#user_account").innerHTML =
+            `<select name="current_user" id="current_user">
+   <option id="useless" class="dash_options" value="">${loged_user}</option>
+   <option id="useless" class="dash_options" value="My Account">My Account</option>
+   <option id="useless" class="dash_options" value="Wishlist">Wishlist</option>
+   <option id="useless" class="dash_options" value="Your Order">Your Order</option>
+   <option id="useless" class="dash_options" value="Your Referrals">Your Referrals</option>
+   <option class="dash_options" value="Sign Out">Sign Out</option>
+ </select>`
+    }
+    let Dash = document.querySelector("#current_user");
+    Dash.addEventListener("change", dashFunction);
+    function dashFunction() {
+        if (Dash.value == "Sign Out") {
+            localStorage.removeItem("loginData");
+            window.location.reload();
+        }
+        else if(Dash.value == "My Account"){
+            window.location.href="my_account.html"
+        }else if(Dash.value == "Wishlist"){
+            window.location.href="my_wishlist.html"
+        }else if(Dash.value == "Your Order"){
+            window.location.href="my_order.html"
+        }
+        else if(Dash.value == "Your Referrals"){
+            window.location.href="my_referrals.html"
+        }
+    }
+}
+</script>
+<script>
+    function login(){
+        window.location.href="./login.html"
+    }
+</script>
+<script type="module">
+    import footer from "./components/footer.js";
+    document.getElementById("footer").innerHTML=footer();
+</script>
