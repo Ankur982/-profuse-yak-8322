@@ -1,0 +1,93 @@
+#container {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+#filter-section {
+    /* border: 1px solid black; */
+    width: 25%;
+    display: flex;
+    row-gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+#filter {
+   /* border: 1px solid black; */
+   width: 90%;
+   /* overflow: scroll; */
+   /* height: 200px; */
+}
+#filter-box {
+    border: 1px solid rgb(237, 237, 237);
+    padding: 10px;
+    /* overflow: scroll; */
+    /* height: 400px; */
+ }
+ 
+
+
+#sorting-section {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: 0px 0px 15px 0px;
+}
+#sorting-section > button {
+    border: none;
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    /* color: white; */
+    background-color: white;
+}
+#sorting-section > button:hover {
+    /* color: white;
+    background-color: black; */
+}
+/* #sorting-section > button:active {
+    color: white;
+    background-color: black;
+} */
+
+#product-section {
+    /* border: 1px solid black; */
+    /* width: 70%; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+#product {
+    border: 1px solid rgba(108, 108, 108, 0.5);
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    cursor: pointer;
+    padding: 20px;
+    transition: 1s;
+}
+#product:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+#content > img {
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: 200px;
+} 
+
+#product > button {
+    width: 100%;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+#product > button:hover {
+    background-color: rgb(55, 186, 186);
+    color: black;
+}

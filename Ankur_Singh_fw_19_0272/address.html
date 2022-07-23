@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Address Page</title>
+    <title> SkinStore: Premium Skin Care Online | Free Shipping Over $49</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
     <style>
@@ -198,10 +198,10 @@
             City: document.querySelector("#City").value,
             state: document.querySelector("#state").value,
         }
-        if (obj.name!=""&&obj.number!=""&&obj.pin!=""&&obj.house_no!=""&&obj.City!=""&&obj.state!=""&&) {
+        if (obj.name!=""&&obj.number!=""&&obj.pin!=""&&obj.house_no!=""&&obj.City!=""&&obj.state!="") {
             localStorage.setItem("delivery_details", JSON.stringify(pay))
             alert("Your Details Saved Successfully")
-            window.location.href = "payment.html"
+            window.location.href = "./payment.html"
 
         } else {
             alert("Invalid details....")
