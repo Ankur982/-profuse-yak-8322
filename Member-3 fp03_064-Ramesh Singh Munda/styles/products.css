@@ -87,3 +87,7 @@
     padding: 10px;
     cursor: pointer;
 }
+#product > button:hover {
+    background-color: rgb(55, 186, 186);
+    color: black;
+}
