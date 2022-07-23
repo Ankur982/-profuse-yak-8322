@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cart page</title>
+  <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<style>
+
+
+  .full_body {
+    /* background-color: black; */
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #promo_code {
+    /* padding-left: 10px; */
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    border: transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    outline: none;
+  }
+
+  #promo_submit {
+    font-weight: 600;
+    padding: 0 30px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    margin-left: 30px;
+  }
+
+  #promo_submit:hover {
+    background-color: teal;
+    /* font-weight: 600; */
+    cursor: pointer;
+  }
+
+  #cart_heading {
+    padding: 30px 7%;
+  }
+
+  .cart_body {
+    width: 90%;
+    display: flex;
+    /* background-color: black; */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #header {
+    width: 100%;
+  }
+
+  .promo_stuff {
+    display: flex;
+    margin-bottom: 60px;
+  }
+
+  .total_price {
+    display: flex;
+    margin: 40px 0;
+  }
+
+  .item_price {
+    padding: 30px 0 60px 0;
+  }
+
+  .cart_item_text {
+    text-align: center;
+    width: 60%;
+    padding: 20px;
+  }
+
+  .cart_item {
+    border-radius: 10px;
+    background-color: rgb(245 245 245);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: fit-content;
+    /* border: 2px solid black; */
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    margin-bottom: 30px;
+  }
+
+  .cart_item:hover {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    cursor: pointer;
+  }
+
+  .item_image {
+    width: 20%;
+    border-radius: 10px;
+    width: 130px;
+  }
+
+
+
+  #checkout_button {
+    padding: 10px 40px;
+    border-radius: 8px;
+    margin-bottom: 60px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+
+  #checkout_button:hover {
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+
+  .remove_button {
+    background-color: red;
+    font-weight: 600;
+    color: white;
+    border: transparent;
+    border-radius: 20px;
+    width: 80%;
+    padding: 5px 10px;
+  }
+
+  .remove_button:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    cursor: pointer;
+  }
+
+  .endDiv {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #footer{
+    margin-top: 630px;
+  }
+</style>
+
+<body>
+  <div id="navbarr">
+  </div>
+
+
+
+  <div class="full_body">
+    <div class="cart_body">
+      <h2 id="cart_heading">
+        Your Cart</h2>
+    </div>
+
+    <div class="total_price">
+      <h1 id="total_price_outer">Cart Total = <h1 id="total_price">0</h1>
+      </h1>
+    </div>
+
+    <div class="promo_stuff">
+      <input type="text" placeholder="Enter Promo Code" id="promo_code">
+      <input type="submit" id="promo_submit" value="Submit">
+    </div>
+
+    <button id="checkout_button">Proceed to Checkout</button>
+
+  </div>
+
+
+
+  <!-- footer part  -->
+
+
+  <div id="footer">
+
+
+  </div>
+
+  
+
+</body>
+
+</html>
+
+<script type="module">
+
+  import navbar from "./components/navbar.js";
+
+  document.getElementById("navbarr").innerHTML=navbar();
+
+
+  document.querySelector("#logo").addEventListener("click",myhome)
+  function myhome(){
+      window.location.href="./home_page.html"
+  }
+
+  document.querySelector("#cart").addEventListener("click",mycart)
+  function mycart(){
+      window.location.href="./cart.html"
+  }
+
+
+  let Dash = document.querySelector("#current_user");
+  Dash.addEventListener("change", dash_Function);
+
+  function dash_Function(){
+       if(Dash.value == "Login"){
+          window.location.href="login.html"
+      }else if(Dash.value == "Register"){
+          window.location.href="./registration.html"
+      }
+      else if(Dash.value == "Wishlist"){
+          window.location.href="./my_wishlist.html"
+      }else if(Dash.value == "Your Order"){
+          window.location.href="./my_order.html"
+      }
+      else if(Dash.value == "Your Referrals"){
+          window.location.href="./my_referrals.html"
+      }
+  }
+
+  let user = JSON.parse(localStorage.getItem("loginData"));
+  let loged_user = user[user.length - 1].name
+  if (user.length > 0) {
+  
+  //logout 
+
+  if (user !== null) {
+      document.querySelector("#user_account").innerHTML =
+          `<select name="current_user" id="current_user">
+ <option id="useless" class="dash_options" value="">${loged_user}</option>
+ <option id="useless" class="dash_options" value="My Account">My Account</option>
+ <option id="useless" class="dash_options" value="Wishlist">Wishlist</option>
+ <option id="useless" class="dash_options" value="Your Order">Your Order</option>
+ <option id="useless" class="dash_options" value="Your Referrals">Your Referrals</option>
+ <option class="dash_options" value="Sign Out">Sign Out</option>
+</select>`
+  }
+
+  let Dash = document.querySelector("#current_user");
+  Dash.addEventListener("change", dashFunction);
+
+  function dashFunction() {
+      if (Dash.value == "Sign Out") {
+          localStorage.removeItem("loginData");
+          window.location.reload();
+      }
+
+      else if(Dash.value == "My Account"){
+          window.location.href="my_account.html"
+      }else if(Dash.value == "Wishlist"){
+          window.location.href="my_wishlist.html"
+      }else if(Dash.value == "Your Order"){
+          window.location.href="my_order.html"
+      }
+      else if(Dash.value == "Your Referrals"){
+          window.location.href="my_referrals.html"
+      }
+  }
+}
+
+
+</script>
+
+
+<script>
+  function login(){
+      window.location.href="./login.html"
+  }
+
+</script>
+
+<script type="module">
+
+  import footer from "./components/footer.js";
+
+  document.getElementById("footer").innerHTML=footer();
+
+  
+
+</script>
+
+
+
+
+
+
+
+<script>
+  let cart_data = JSON.parse(localStorage.getItem("cartData"));
+  var discCount = 0;
+  var totalPrice = 0;
+
+  console.log(cart_data);
+  displayItems();
+  // var cart_price = 0;
+
+  function displayItems() {
+
+    cart_data.forEach(function (elem, index) {
+      totalPrice += Number(elem.price);
+
+      let cart_item = document.createElement("div");
+      cart_item.classList.add("cart_item");
+
+      let imgLink = elem.image;
+      let img = document.createElement("img");
+      img.setAttribute("src", imgLink);
+      img.setAttribute("class", "item_image")
+      img.addEventListener("click", function () {
+        window.location.href = elem.url;
+      })
+
+      let name = document.createElement("h3");
+      name.innerText = elem.name;
+      name.setAttribute("class", "cart_item_text")
+      // name.style.fontSize = "smaller";
+
+      let price = document.createElement("h1");
+      price.innerText = ("$" + elem.price);
+      price.setAttribute("class", "item_price")
+
+      let remove_button = document.createElement("button");
+      remove_button.innerText = "Remove Item";
+      remove_button.classList.add("remove_button")
+      remove_button.addEventListener("click", function () {
+        deleteItem(index);
+      })
+      // remove_button
+
+      let endDiv = document.createElement("div");
+      endDiv.classList.add("endDiv")
+      endDiv.append(price, remove_button);
+
+
+      cart_item.append(img, name, endDiv);
+      console.log(cart_item)
+
+      let body = document.querySelector(".cart_body");
+      body.append(cart_item)
+    })
+
+    document.querySelector("#total_price").innerText ="$"+ totalPrice;
+  }
+
+  function applyCoupon() {
+    let coupons = document.querySelector("#promo_code").value;
+
+    if (discCount > 0) {
+      alert("Promo Code Already Used !!");
+      return;
+    } else {
+      if (coupons == "skin30") {
+        discCount += 1;
+        let per = totalPrice * 30 / 100;
+        disc = totalPrice - per;
+        alert("Congrats... You got the 30% Discount")
+        document.querySelector("#total_price").innerText = disc;
+        totalPrice =disc;
+      }
+    }
+  }
+
+  document.querySelector("#promo_submit").addEventListener("click", applyCoupon);
+
+  document.querySelector("#checkout_button").addEventListener("click", redirectPayment);
+
+  function redirectPayment() {
+    window.location.href = "#"
+  }
+
+
+  function deleteItem(index) {
+
+    cart_data.splice(index, 1)
+    localStorage.setItem("cartData", JSON.stringify(cart_data));
+    window.location.reload();
+  }
+</script>
+
+
+
+
+

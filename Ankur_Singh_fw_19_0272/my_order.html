@@ -128,8 +128,8 @@
         <h1>Order Information</h1>
     </div>
     <div>
-        <button class="my_acc_btn1">ACCOUNT HOME</button>
-        <button class="my_acc_btn2">LOG OUT</button>
+        <button class="my_acc_btn1" id="account_home_btn">ACCOUNT HOME</button>
+        <button class="my_acc_btn2" id="logout_btn">LOG OUT</button>
     </div>
 
 </div>
@@ -184,6 +184,13 @@
     }
 
 
+    document.querySelector("#account_home_btn").addEventListener("click",my_account_home)
+
+    function my_account_home(){
+        window.location.href="./home_page.html"
+    }
+
+
     let Dash = document.querySelector("#current_user");
     Dash.addEventListener("change", dash_Function);
 
@@ -207,6 +214,7 @@
     let loged_user = user[user.length - 1].name
     if (user.length > 0) {
     
+        
     //logout 
 
     if (user !== null) {
@@ -220,6 +228,7 @@
    <option class="dash_options" value="Sign Out">Sign Out</option>
  </select>`
     }
+
 
     let Dash = document.querySelector("#current_user");
     Dash.addEventListener("change", dashFunction);
@@ -240,6 +249,16 @@
         else if(Dash.value == "Your Referrals"){
             window.location.href="my_referrals.html"
         }
+    }
+
+
+
+    
+    document.querySelector("#logout_btn").addEventListener("click",logout_func)
+
+    function logout_func(){
+        localStorage.removeItem("loginData");
+            window.location.reload();
     }
 }
 
