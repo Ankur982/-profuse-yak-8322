@@ -1,0 +1,146 @@
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  ::-webkit-scrollbar-track {
+    background: #c6bdbd; 
+  }
+  #footer{
+      margin-top: 700px;
+  }
+          body{
+      margin-left:250px;
+      margin-right:250px;
+      width: 1400px;
+      border: 1px rgb(11, 11, 11) dotted;
+      height: auto;
+      font-family: "Lato-Light",Helvetica,Arial,sans-serif;
+      
+  }
+  
+  #headline{
+      font-size: 60px;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 50px;
+  }
+  #container1{
+      width: 1400px;
+      height: auto;
+      /* border: 2px rgb(209, 5, 249) solid; */
+       display: flex;
+     
+       
+  }
+  #container11{
+      width: 310px;
+      height: auto;
+      /* border: 2px solid rgb(229, 16, 16); */
+      
+  }
+  
+  .container111{
+      width: 310;
+      height: 220px;
+      /* border: 2px solid; */
+  }
+  #container12{
+      width:1050px;
+      height:2000px;
+      /* border: 2px solid blue; */
+      margin-left: 20px;
+      overflow-y: scroll;
+  
+  }
+  
+  .checkbox{
+      height: 140px;
+      width:305px;
+      /* border: 1px solid rgb(5, 5, 217); */
+      margin-top:-4px;
+      overflow: scroll;
+      overflow-x: hidden;
+      overflow-y: none;
+      
+   }
+  label{
+      font-size: 18px;
+  }
+  
+  
+  
+  .smallcheckbox{
+      height: 20px;
+      width: 20px;
+  
+  }
+  
+  .checkbox1{
+      height: 25px;
+      width: 250px;
+      /* border: 1px solid black; */
+      display: flex;
+      gap:8px;
+      
+  }
+  .p{
+      font-size: 20px;
+      font-weight: lighter;
+      
+  }
+  .head{
+      font-size: 25px;
+      font-weight: 500;
+  }
+  
+  #image{
+      height: 309px;
+      width: 309px;
+  }
+  
+  #container12{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap:30px
+  }
+  
+  .div {
+      height: 500px;
+      width: 326px;
+  }
+  .div p{
+      font-size: 20px;
+      font-weight:bold;
+      /* margin-bottom: 80px; */
+  
+  }
+  button:hover{
+      background-color:rgb(100, 235, 228) ;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  
+  }
+  .div title{
+      margin-bottom: 70px;
+  }
+  button{
+      height: 44px;
+      width: 309px;
+      /* border:1px solid; */
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      background-color: black;
+      color: aliceblue;
+      font-size: 15px;
+   }
+   #cont{
+      /* border: 2px solid red; */
+      width: 75%;
+      margin-left: 22%;
+      margin-bottom: 60px;
+   }

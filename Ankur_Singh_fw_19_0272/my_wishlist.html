@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishlist</title>
+    <title> SkinStore: Premium Skin Care Online | Free Shipping Over $49</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
@@ -108,7 +108,7 @@
     <div id="my_wishlist">
         <h1>My Wishlist</h1>
         <hr>
-        <div>
+        <div id="wishlish_container">
             <img class="wishlist_img"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf_D5oEjScHGofIp1r475g2cJ9sS0LtMkyfewdpQ0qcZdWtZKc"
                 alt="error">
@@ -171,7 +171,7 @@
 
     import navbar from "./components/navbar.js";
 
-    document.getElementById("navbarr").innerHTML=navbar();
+    document.getElementById("navbar").innerHTML=navbar();
 
 
     document.querySelector("#logo").addEventListener("click",myhome)
@@ -257,6 +257,10 @@
         window.location.href="./home_page.html"
     }
 
+
+    // let wishlist_data=JSON.parse(localStorage.getItem("wishlist"));
+
+    
 
 
 </script>

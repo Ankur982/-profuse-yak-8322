@@ -91,6 +91,10 @@ slide show css */
 
 }
 
+#shopByCategory_box{
+    margin-top: 90px;
+}
+
 
 #shopByCategory {
     width: 1400px;
@@ -209,3 +213,8 @@ text-align: center;
 #trending_Now_txt{
 margin-top: -30px;
 }
+
+/* 
+#shop_by_cat_h1{
+    margin-top: 80px;
+} */
