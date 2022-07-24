@@ -48,7 +48,7 @@ let navbar = () => {
                         <li><a href="">Kate Mcleod</a>
                     </ul>
                     <ul>
-                        <li><a href="">Only At Sephora</a>
+                        <li><a href="">Only At Skin Store</a>
                         <li><a href="">Paula's Choice</a>
                         <li><a href="">InnBeauty Project</a>
                         <li><a href="">The 7 Virtues</a>
@@ -58,7 +58,7 @@ let navbar = () => {
                     </ul>
                     <ul>
                         <li><a href="">Affordable Brands</a>
-                        <li><a href="">SEPHORA COLLECTION</a>
+                        <li><a href="">Skin Store COLLECTION</a>
                         <li><a href="">The Ordinary</a>
                         <li><a href="">The Inkey List</a>
                         <li><a href="">Verb</a>
@@ -71,7 +71,7 @@ let navbar = () => {
                         <li><a href="">Briogeo</a>
                     </ul>
                     <ul>
-                        <li><a href="">Clean At Sephora</a>
+                        <li><a href="">Clean At Skin Store</a>
                         <li><a href="">ILIA</a>
                         <li><a href="">Olaplex</a>
                         <li><a href="">Tatcha</a>
@@ -198,7 +198,7 @@ let navbar = () => {
                         <li><a href="">Vegan Makeup</a>
                         <li><a href="">Mini Size</a>
                         <li><a href="">Value Size</a>
-                        <li><a href="">Sephora Collection</a>
+                        <li><a href="">Skin Store Collection</a>
                     </ul>
                     <ul>
                         <li><a href="">Help Me Choose</a>
@@ -269,7 +269,7 @@ let navbar = () => {
                         <li><a href="">Value And Giftsets</a>
                         <li><a href="">Mini Size</a>
                         <li><a href="">value Size</a>
-                        <li><a href="">Sephora Collection</a>
+                        <li><a href="">Skin Store Collection</a>
                     </ul>
                     <ul>
                         <li><a href="">Help Me Choose</a>
@@ -340,7 +340,7 @@ let navbar = () => {
                         <li><a href="">Vegan Haircare</a>
                         <li><a href="">Mini Size</a>
                         <li><a href="">Value Size</a>
-                        <li><a href="">Sephora Collection</a>
+                        <li><a href="">Skin Store Collection</a>
                         <li><a href="">Luxury Hair</a>
                     </ul>
                     <ul>
@@ -370,7 +370,7 @@ let navbar = () => {
                         <li><a href="">Perfume Gift Sets</a>
                         <li><a href="">Cologne Gift Sets</a>
                         <li><a href="">Home Gift Sets</a>
-                        <li><a href="">Sephora Favorites</a>
+                        <li><a href="">Skin Store Favorites</a>
                     </ul>
                     <ul>
                         <li><a href="">Candles & Home Scents</a>
@@ -407,7 +407,7 @@ let navbar = () => {
                 <div>
                     <ul>
                         <li><a href="">All Tools & Brushes</a>
-                        <li><a href="">Sephora Collection</a>
+                        <li><a href="">Skin Store Collection</a>
                         <li><a href="">Brushes & Applications</a>
                         <li><a href="">Brush Sets</a>
                         <li><a href="">Face Brushes</a>
@@ -488,7 +488,7 @@ let navbar = () => {
                         <li><a href="">BestSellers</a>
                         <li><a href="">Mini Size</a>
                         <li><a href="">Value Size</a>
-                        <li><a href="">Sephora Collection</a>
+                        <li><a href="">Skin Store Collection</a>
                         <li><a href="">Allure Best Of Beauty Bath & Body</a>
                     </ul>
                     <ul>
@@ -512,7 +512,7 @@ let navbar = () => {
                         <li><a href="">Value & Gift Sets</a>
                         <li><a href="">$15 and Under</a>
                         <li><a href="">$25 and Under</a>
-                        <li><a href="">Sephora Favorites</a>
+                        <li><a href="">Skin Store Favorites</a>
                     </ul>
                     <ul>
                         <li><a href=""><img
@@ -562,7 +562,7 @@ let navbar = () => {
                     <ul>
                         <li><a href="">Top Rated Gifts</a>
                         <li><a href="">Mini Size</a>
-                        <li><a href="">Only At Sephora</a>
+                        <li><a href="">Only At Skin Store</a>
                         <li><a href="">Luxury</a>
                         <li><a href="">Gift Finder</a>
                     </ul>
@@ -584,7 +584,7 @@ let navbar = () => {
                         <li><a href="">Bath and Body Under $20</a>
                     </ul>
                     <ul>
-                        <li><a href="">Sephora Collection Under $20</a>
+                        <li><a href="">Skin Store Collection Under $20</a>
                         <li><a href="">Makeup</a>
                         <li><a href="">Skincare</a>
                         <li><a href="">Hair</a>
